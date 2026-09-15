@@ -105,7 +105,7 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
 
             <div className="flex flex-col sm:flex-row items-center gap-2.5 pt-1">
               <a
-                href={applyUrl}
+                href={applyUrl || 'https://www.rrbapply.gov.in/#/auth/landing'}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleOpenDirect}
@@ -126,6 +126,71 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
                 {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
                 <span>{copied ? '✓ लिंक कॉपी हो गई' : 'लिंक कॉपी करें'}</span>
               </button>
+            </div>
+          </div>
+
+          {/* Quick Dual Link Options for RRB */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-xs text-slate-900">Direct Auth Landing Portal</span>
+                <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded">Active</span>
+              </div>
+              <p className="text-[11px] font-mono text-slate-500 break-all">
+                https://www.rrbapply.gov.in/#/auth/landing
+              </p>
+              <div className="flex items-center gap-2 pt-1">
+                <a
+                  href="https://www.rrbapply.gov.in/#/auth/landing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-1.5 px-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1"
+                >
+                  <span>Open Landing</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText('https://www.rrbapply.gov.in/#/auth/landing');
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  }}
+                  className="py-1.5 px-2.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-medium rounded-lg"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+
+            <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-xs text-slate-900">RRB Central Official Portal</span>
+                <span className="text-[10px] bg-blue-100 text-blue-800 font-bold px-1.5 py-0.5 rounded">Official</span>
+              </div>
+              <p className="text-[11px] font-mono text-slate-500 break-all">
+                https://rrb.gov.in
+              </p>
+              <div className="flex items-center gap-2 pt-1">
+                <a
+                  href="https://rrb.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-1.5 px-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1"
+                >
+                  <span>Open rrb.gov.in</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText('https://rrb.gov.in');
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  }}
+                  className="py-1.5 px-2.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-medium rounded-lg"
+                >
+                  Copy
+                </button>
+              </div>
             </div>
           </div>
 

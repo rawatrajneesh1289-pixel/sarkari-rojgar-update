@@ -37,6 +37,7 @@ export interface CreateJobInput {
   officialWebsite: string;
   notificationUrl?: string;
   applyUrl?: string;
+  importantLinks?: ImportantLink[];
   faqs?: FAQ[];
   publishedAt?: string;
 }
@@ -45,7 +46,7 @@ export function buildJob(data: CreateJobInput): Job {
   const defaultApply = data.applyUrl || data.officialWebsite;
   const defaultNotif = data.notificationUrl || data.officialWebsite;
 
-  const links: ImportantLink[] = [
+  const links: ImportantLink[] = data.importantLinks || [
     {
       label: 'Apply Online (ऑनलाइन आवेदन करें)',
       url: defaultApply,

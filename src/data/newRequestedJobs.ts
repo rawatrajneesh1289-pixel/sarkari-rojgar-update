@@ -35,8 +35,34 @@ export const NEW_REQUESTED_JOBS: Job[] = [
     ageRelaxationDetails: 'अधिकतम आयु सीमा में छूट: ओबीसी (Non-Creamy Layer) को 3 वर्ष, एससी/एसटी को 5 वर्ष, पीडब्ल्यूबीडी को 10 वर्ष एवं भूतपूर्व सैनिकों को नियमानुसार छूट।',
     salaryScale: '7th CPC Pay Matrix: Level-3 (₹ 21,700), Level-4 (₹ 25,500), Level-5 (₹ 29,200), Level-6 (₹ 35,400) एवं Level-7 (₹ 44,900 - ₹ 1,42,400) + भत्ते',
     officialWebsite: 'https://rrb.gov.in',
-    applyUrl: 'https://rrb.gov.in',
+    applyUrl: 'https://www.rrbapply.gov.in/#/auth/landing',
     notificationUrl: 'https://rrb.gov.in',
+    importantLinks: [
+      {
+        label: 'Apply Online (ऑनलाइन आवेदन करें - Direct Landing)',
+        url: 'https://www.rrbapply.gov.in/#/auth/landing',
+        type: 'APPLY',
+        isExternal: true,
+      },
+      {
+        label: 'Apply Online (आरआरबी केंद्रीकृत पोर्टल)',
+        url: 'https://rrbapply.gov.in',
+        type: 'APPLY',
+        isExternal: true,
+      },
+      {
+        label: 'Download Official Notification PDF (विस्तृत अधिसूचना)',
+        url: 'https://rrb.gov.in',
+        type: 'NOTIFICATION',
+        isExternal: true,
+      },
+      {
+        label: 'Official RRB Portal (आधिकारिक वेबसाइट)',
+        url: 'https://rrb.gov.in',
+        type: 'WEBSITE',
+        isExternal: true,
+      },
+    ],
     postWiseVacancies: [
       {
         postName: 'Nursing Superintendent (नर्सिंग अधीक्षक)',

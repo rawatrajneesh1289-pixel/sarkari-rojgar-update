@@ -15,8 +15,15 @@ import {
   AlertTriangle,
   ExternalLink,
   Search,
+  Lock,
+  LogOut,
+  ShieldCheck,
+  ArrowLeft,
+  Sparkles,
+  Zap,
 } from 'lucide-react';
 import { db } from '../../services/db';
+import { envHelper } from '../../utils/envHelper';
 import { Job, Announcement, JobStatus } from '../../types';
 import { StatusBadge } from '../../components/common/StatusBadge';
 import { Breadcrumbs } from '../../components/common/Breadcrumbs';
@@ -25,6 +32,9 @@ import { useRouter } from '../../context/RouterContext';
 
 export const AdminDashboard: React.FC = () => {
   const { navigate } = useRouter();
+  const [isAuthenticated, setIsAuthenticated] = useState(() => db.isAdminLoggedIn());
+  const [passwordInput, setPasswordInput] = useState('');
+  const [authError, setAuthError] = useState('');
   const [activeTab, setActiveTab] = useState<'jobs' | 'announcements' | 'results' | 'admit-cards'>('jobs');
   const [jobs, setJobs] = useState<Job[]>(() => db.getJobs());
   const [announcements, setAnnouncements] = useState<Announcement[]>(() => db.getAnnouncements());
@@ -32,6 +42,24 @@ export const AdminDashboard: React.FC = () => {
   const [newNoticeLink, setNewNoticeLink] = useState('/jobs');
   const [successMsg, setSuccessMsg] = useState('');
   const [searchJob, setSearchJob] = useState('');
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (db.adminLogin(passwordInput.trim())) {
+      setIsAuthenticated(true);
+      setAuthError('');
+      setJobs(db.getJobs());
+      setAnnouncements(db.getAnnouncements());
+    } else {
+      setAuthError('अमान्य पासकी! सही व्यवस्थापक पासवर्ड दर्ज करें (डिफ़ॉल्ट: admin2026 या sruadmin)');
+    }
+  };
+
+  const handleLogout = () => {
+    db.adminLogout();
+    setIsAuthenticated(false);
+    navigate('/');
+  };
 
   const flashMessage = (msg: string) => {
     setSuccessMsg(msg);
@@ -110,6 +138,118 @@ export const AdminDashboard: React.FC = () => {
     return j.title.toLowerCase().includes(q) || j.organization.toLowerCase().includes(q);
   });
 
+  if (!isAuthenticated) {
+    const isPreview = envHelper.isAIStudioOrDev();
+
+    return (
+      <>
+        <SeoHead
+          title="Admin Authentication | Sarkari Rozgar Update"
+          description="व्यवस्थापक लॉगिन"
+        />
+        <div className="min-h-[70vh] flex items-center justify-center px-4 py-12">
+          <div className="w-full max-w-md bg-white rounded-2xl border border-slate-200 shadow-xl p-6 sm:p-8">
+            <div className="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center text-white mx-auto mb-4 shadow-md">
+              <Lock className="w-6 h-6 text-amber-400" />
+            </div>
+
+            <div className="text-center mb-6">
+              {isPreview && (
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100 text-amber-900 border border-amber-300 rounded-full text-xs font-bold mb-3 shadow-2xs">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                  <span>AI Studio Preview Environment</span>
+                </div>
+              )}
+              <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+                व्यवस्थापक प्रमाणीकरण
+              </h2>
+              <p className="text-xs text-slate-500 mt-1">
+                Admin Control Portal • अधिकृत व्यवस्थापक के लिए
+              </p>
+            </div>
+
+            {isPreview && (
+              <div className="mb-5 p-3.5 bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-300 rounded-xl">
+                <p className="text-xs font-bold text-amber-950 mb-2 flex items-center gap-1.5">
+                  <Zap className="w-4 h-4 text-amber-600 fill-current" />
+                  <span>Preview मोड डायरेक्ट एक्सेस:</span>
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    db.adminLogin('admin2026');
+                    setIsAuthenticated(true);
+                    setJobs(db.getJobs());
+                    setAnnouncements(db.getAnnouncements());
+                  }}
+                  className="w-full py-2.5 px-4 bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-slate-950 text-xs sm:text-sm font-extrabold rounded-xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <ShieldCheck className="w-4 h-4 text-slate-950" />
+                  <span>1-Click Instant Access (AI Studio)</span>
+                </button>
+                <p className="text-[10px] text-amber-800 mt-1.5 text-center">
+                  यहाँ AI Studio में बिना टाइप किए तुरंत एडमिन डैशबोर्ड खोलें
+                </p>
+              </div>
+            )}
+
+            {authError && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-xs text-red-700 font-medium flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4 shrink-0" />
+                <span>{authError}</span>
+              </div>
+            )}
+
+            <form onSubmit={handleLogin} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                  सुरक्षा पासकी / पासवर्ड (Admin Password):
+                </label>
+                <input
+                  type="password"
+                  value={passwordInput}
+                  onChange={(e) => setPasswordInput(e.target.value)}
+                  placeholder="admin2026 या sruadmin"
+                  autoFocus={!isPreview}
+                  required
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 focus:bg-white focus:border-blue-600 outline-hidden transition"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold rounded-xl shadow-md transition flex items-center justify-center gap-2"
+              >
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <span>पासवर्ड से लॉगिन करें</span>
+              </button>
+            </form>
+
+            <div className="mt-5 p-3 bg-slate-50 border border-slate-200 rounded-xl text-[11px] text-slate-600 space-y-1">
+              <p className="font-bold text-slate-800 flex items-center gap-1">
+                <span>🔒 Netlify / Production सुरक्षा नियम:</span>
+              </p>
+              <p className="leading-relaxed text-slate-500">
+                जब आप इसे Netlify पर डिप्लॉय करेंगे, तब एडमिन पैनल का कोई भी बटन पब्लिक को नहीं दिखेगा। साइट केवल गुप्त URL (<code className="bg-slate-200 px-1 py-0.5 rounded text-slate-700 font-mono">/admin</code>) और पासवर्ड (<code className="bg-slate-200 px-1 py-0.5 rounded text-slate-700 font-mono">admin2026</code>) से ही खुलेगी।
+              </p>
+            </div>
+
+            <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <button
+                onClick={() => navigate('/')}
+                className="hover:text-slate-800 flex items-center gap-1 transition"
+              >
+                <ArrowLeft className="w-3.5 h-3.5" />
+                <span>होमपेज पर वापस जाएं</span>
+              </button>
+              <span className="text-[11px] text-slate-400">शॉर्टकट: Ctrl+Shift+A</span>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <SeoHead
@@ -123,11 +263,20 @@ export const AdminDashboard: React.FC = () => {
         {/* Top Header */}
         <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 my-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-lg">
           <div>
-            <div className="flex items-center gap-2 mb-1">
+            <div className="flex items-center gap-2 mb-1 flex-wrap">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
               <span className="text-xs font-bold text-amber-400 tracking-wider uppercase">
                 SRU व्यवस्थापक डैशबोर्ड
               </span>
+              {envHelper.isAIStudioOrDev() ? (
+                <span className="text-[10px] bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/40 font-bold">
+                  AI Studio Preview Mode
+                </span>
+              ) : (
+                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/40 font-bold">
+                  Production Mode (Hidden from Public)
+                </span>
+              )}
             </div>
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
               Admin Control Panel
@@ -152,6 +301,14 @@ export const AdminDashboard: React.FC = () => {
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>रीसेट डेटा</span>
+            </button>
+            <button
+              onClick={handleLogout}
+              className="inline-flex items-center gap-1.5 px-3 py-2 bg-red-950/60 hover:bg-red-900 text-red-200 rounded-xl text-xs font-bold border border-red-800/50 transition"
+              title="Logout from Admin"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>लॉगआउट</span>
             </button>
           </div>
         </div>

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { RouterProvider, useRouter } from './context/RouterContext';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
@@ -38,6 +38,76 @@ import { PrivacyPolicyPage, TermsPage } from './pages/PrivacyPolicyPage';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { AdminJobEditor } from './pages/admin/AdminJobEditor';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { db } from './services/db';
+import { envHelper } from './utils/envHelper';
+
+function AdminGlobalListener() {
+  const { navigate, path } = useRouter();
+  const [isAdmin, setIsAdmin] = useState(() => db.isAdminLoggedIn());
+  const isPreview = envHelper.isAIStudioOrDev();
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        navigate('/admin');
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [navigate]);
+
+  useEffect(() => {
+    setIsAdmin(db.isAdminLoggedIn());
+  }, [path]);
+
+  // When logged in: show active toolbar
+  if (isAdmin) {
+    return (
+      <div className="fixed bottom-4 right-4 z-40 bg-slate-900/95 hover:bg-slate-900 text-white px-3 py-1.5 rounded-full shadow-lg border border-amber-500/50 flex items-center gap-2 text-xs backdrop-blur-xs">
+        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span className="font-semibold text-[11px] text-amber-300">
+          Admin Active {isPreview ? '(AI Studio)' : ''}
+        </span>
+        <button
+          onClick={() => navigate('/admin')}
+          className="underline hover:text-white text-[11px] font-medium"
+        >
+          Dashboard
+        </button>
+        <button
+          onClick={() => {
+            db.adminLogout();
+            setIsAdmin(false);
+            navigate('/');
+          }}
+          className="ml-1 text-[10px] bg-red-800 hover:bg-red-700 px-1.5 py-0.5 rounded text-red-100 font-bold"
+        >
+          Logout
+        </button>
+      </div>
+    );
+  }
+
+  // In AI Studio Preview: show a convenient floating shortcut so creator can access it instantly
+  if (isPreview) {
+    return (
+      <div className="fixed bottom-4 right-4 z-40">
+        <button
+          onClick={() => navigate('/admin')}
+          className="bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-slate-950 font-bold px-3 py-1.5 rounded-full shadow-md text-xs flex items-center gap-1.5 border border-amber-400 transition"
+          title="AI Studio Preview Admin Access"
+        >
+          <span className="text-[13px]">🛠️</span>
+          <span>Admin Panel (Preview)</span>
+        </button>
+      </div>
+    );
+  }
+
+  // On Netlify / Production: completely hidden from public viewers!
+  return null;
+}
 
 const AppRoutes: React.FC = () => {
   const { path } = useRouter();
@@ -156,6 +226,7 @@ export default function App() {
         </main>
         <Footer />
         <AdPlaceholder type="Mobile Sticky Ad" />
+        <AdminGlobalListener />
       </div>
     </RouterProvider>
   );

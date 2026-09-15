@@ -1,9 +1,12 @@
 import React from 'react';
-import { ShieldAlert, ExternalLink, Mail, MapPin, Heart, ArrowUp } from 'lucide-react';
+import { ShieldAlert, ExternalLink, Mail, MapPin, Heart, ArrowUp, Lock } from 'lucide-react';
 import { useRouter } from '../../context/RouterContext';
+import { db } from '../../services/db';
+import { envHelper } from '../../utils/envHelper';
 
 export const Footer: React.FC = () => {
   const { navigate } = useRouter();
+  const showAdmin = envHelper.shouldShowAdminInNavigation(db.isAdminLoggedIn());
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -147,18 +150,34 @@ export const Footer: React.FC = () => {
                   Terms & Conditions (नियम व शर्तें)
                 </button>
               </li>
-              <li>
-                <button onClick={() => navigate('/admin')} className="text-slate-500 hover:text-slate-300 transition">
-                  Admin Panel (व्यवस्थापक)
-                </button>
-              </li>
+              {showAdmin && (
+                <li>
+                  <button
+                    onClick={() => navigate('/admin')}
+                    className="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1.5 transition"
+                  >
+                    <Lock className="w-3 h-3" />
+                    <span>Admin Panel (व्यवस्थापक)</span>
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar with Copyright & Scroll to top */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© 2026 Sarkari Rozgar Update (SRU). All Rights Reserved. Made for Indian Students & Aspirants.</p>
+          <p>
+            © 2026 Sarkari Rozgar Update (SRU). All Rights Reserved. Made for Indian Students & Aspirants.
+            <button
+              onClick={() => navigate('/admin')}
+              className="opacity-10 hover:opacity-40 text-[10px] ml-1 transition cursor-default"
+              title="Portal Management"
+              aria-label="Portal Management"
+            >
+              •
+            </button>
+          </p>
 
           <div className="flex items-center gap-4">
             <span>Domain: sarkarirozgarupdate.com</span>

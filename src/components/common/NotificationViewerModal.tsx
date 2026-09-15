@@ -496,28 +496,28 @@ export const NotificationViewerModal: React.FC<NotificationViewerModalProps> = (
                 <div className="p-4 border border-slate-200 rounded-xl bg-white hover:border-blue-400 transition shadow-2xs">
                   <div className="flex items-center justify-between gap-2 mb-2">
                     <span className="font-bold text-sm text-slate-900">
-                      2. Official Online Application Portal
+                      2. Official Registration & Auth Landing
                     </span>
-                    <span className="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded">
-                      Direct
+                    <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">
+                      Direct Apply
                     </span>
                   </div>
                   <p className="text-xs text-slate-500 mb-3 font-mono break-all">
-                    https://rrb.gov.in
+                    https://www.rrbapply.gov.in/#/auth/landing
                   </p>
                   <div className="flex gap-2">
                     <a
-                      href="https://rrb.gov.in"
+                      href="https://www.rrbapply.gov.in/#/auth/landing"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition"
+                      className="flex-1 inline-flex items-center justify-center gap-1 px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition"
                     >
-                      <span>Open Portal</span>
+                      <span>Open Apply Landing</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                     <button
                       onClick={() => {
-                        navigator.clipboard.writeText('https://rrb.gov.in');
+                        navigator.clipboard.writeText('https://www.rrbapply.gov.in/#/auth/landing');
                         setCopied(true);
                         setTimeout(() => setCopied(false), 2000);
                       }}

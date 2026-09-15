@@ -15,14 +15,19 @@ import {
   ChevronDown,
   ShieldAlert,
   Sparkles,
+  Lock,
+  Wrench,
 } from 'lucide-react';
 import { useRouter } from '../../context/RouterContext';
+import { db } from '../../services/db';
+import { envHelper } from '../../utils/envHelper';
 
 export const Header: React.FC = () => {
   const { path, navigate } = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
   const [quickSearchText, setQuickSearchText] = useState('');
+  const showAdmin = envHelper.shouldShowAdminInNavigation(db.isAdminLoggedIn());
 
   const navItems = [
     { label: 'Home', labelHi: 'होम', path: '/' },
@@ -42,7 +47,9 @@ export const Header: React.FC = () => {
     { label: 'About Portal', labelHi: 'हमारे बारे में', path: '/about' },
     { label: 'Contact Us', labelHi: 'संपर्क करें', path: '/contact' },
     { label: 'Disclaimer Notice', labelHi: 'अस्वीकरण (Disclaimer)', path: '/disclaimer' },
-    { label: 'Admin Portal', labelHi: 'एडमिन पैनल', path: '/admin' },
+    ...(showAdmin
+      ? [{ label: 'Admin Portal', labelHi: 'एडमिन पैनल (व्यवस्थापक)', path: '/admin' }]
+      : []),
   ];
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -73,10 +80,10 @@ export const Header: React.FC = () => {
           </div>
           <div className="flex items-center gap-4 text-slate-300">
             <button
-              onClick={() => navigate('/admin')}
+              onClick={() => navigate('/jobs')}
               className="hover:text-amber-400 transition"
             >
-              Admin Dashboard
+              लेटेस्ट सरकारी नौकरियां
             </button>
             <span>|</span>
             <button
@@ -85,6 +92,19 @@ export const Header: React.FC = () => {
             >
               मदद एवं सुझाव (Helpdesk)
             </button>
+            {showAdmin && (
+              <>
+                <span>|</span>
+                <button
+                  onClick={() => navigate('/admin')}
+                  className="hover:text-amber-300 font-bold text-amber-400 transition flex items-center gap-1"
+                  title="एडमिन पोर्टल"
+                >
+                  <Lock className="w-3 h-3" />
+                  <span>एडमिन पैनल {envHelper.isAIStudioOrDev() ? '(Preview)' : ''}</span>
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -139,13 +159,22 @@ export const Header: React.FC = () => {
               <Search className="w-5 h-5" />
             </button>
 
-            {/* Quick Admin shortcut */}
-            <button
-              onClick={() => navigate('/admin')}
-              className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 transition"
-            >
-              <span>Admin</span>
-            </button>
+            {/* Admin shortcut visible in Preview mode or when logged in */}
+            {showAdmin && (
+              <button
+                onClick={() => navigate('/admin')}
+                className="inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-1.5 rounded-lg border border-amber-500 bg-amber-50 hover:bg-amber-100 text-amber-950 transition shadow-2xs"
+                title="Admin Control Panel"
+              >
+                <Lock className="w-3.5 h-3.5 text-amber-700" />
+                <span>Admin Panel</span>
+                {envHelper.isAIStudioOrDev() && (
+                  <span className="text-[9px] bg-amber-200 text-amber-950 font-bold px-1.5 py-0.5 rounded hidden sm:inline">
+                    Preview
+                  </span>
+                )}
+              </button>
+            )}
 
             {/* Mobile Hamburger */}
             <button

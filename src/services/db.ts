@@ -28,7 +28,7 @@ import {
 import { isJobApplicationOpen } from '../data/realLatestJobs';
 
 const STORAGE_KEYS = {
-  JOBS: 'sru_db_jobs_v7',
+  JOBS: 'sru_db_jobs_v8',
   ADMIT_CARDS: 'sru_db_admit_cards_v4',
   RESULTS: 'sru_db_results_v1',
   ANSWER_KEYS: 'sru_db_answer_keys_v3',

@@ -19,6 +19,7 @@ import {
   Check,
   Eye,
   Globe,
+  Edit3,
 } from 'lucide-react';
 import { db } from '../services/db';
 import { StatusBadge } from '../components/common/StatusBadge';
@@ -127,7 +128,19 @@ export const JobDetailPage: React.FC<JobDetailPageProps> = ({ slug }) => {
                   <Building2 className="w-3.5 h-3.5 text-blue-600" />
                   <span>{job.organization}</span>
                 </span>
-                <StatusBadge status={job.status} />
+                <div className="flex items-center gap-2">
+                  {db.isAdminLoggedIn() && (
+                    <button
+                      onClick={() => navigate(`/admin/edit-job/${job.id}`)}
+                      className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-md bg-amber-100 hover:bg-amber-200 text-amber-950 border border-amber-300 transition"
+                      title="एडमिन: इस भर्ती को तुरंत संपादित करें"
+                    >
+                      <Edit3 className="w-3.5 h-3.5" />
+                      <span>एडिट भर्ती (Admin Edit)</span>
+                    </button>
+                  )}
+                  <StatusBadge status={job.status} />
+                </div>
               </div>
 
               <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-2">

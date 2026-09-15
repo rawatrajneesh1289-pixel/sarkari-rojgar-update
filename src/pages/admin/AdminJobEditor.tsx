@@ -14,6 +14,16 @@ export const AdminJobEditor: React.FC<AdminJobEditorProps> = ({ jobId }) => {
   const { navigate } = useRouter();
   const isEditing = Boolean(jobId);
 
+  useEffect(() => {
+    if (!db.isAdminLoggedIn()) {
+      navigate('/admin');
+    }
+  }, [navigate]);
+
+  if (!db.isAdminLoggedIn()) {
+    return null;
+  }
+
   const [formData, setFormData] = useState<Job>(() => {
     if (jobId) {
       const existing = db.getJobById(jobId);
