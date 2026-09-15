@@ -1,0 +1,6 @@
+{
+  "name": "Sarkari Rozgar Update",
+  "description": "सरकारी नौकरी और परीक्षा की हर जरूरी जानकारी एक जगह - Latest Government Jobs, Admit Cards, Results, Sarkari Yojana, Syllabus & Exams Update",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
