@@ -28,17 +28,17 @@ import {
 import { isJobApplicationOpen } from '../data/realLatestJobs';
 
 const STORAGE_KEYS = {
-  JOBS: 'sru_db_jobs_v8',
-  ADMIT_CARDS: 'sru_db_admit_cards_v4',
+  JOBS: 'sru_db_jobs_v9',
+  ADMIT_CARDS: 'sru_db_admit_cards_v5',
   RESULTS: 'sru_db_results_v1',
   ANSWER_KEYS: 'sru_db_answer_keys_v3',
   SCHEMES: 'sru_db_schemes_v1',
   SCHOLARSHIPS: 'sru_db_scholarships_v4',
   ADMISSIONS: 'sru_db_admissions_v4',
-  SYLLABUS: 'sru_db_syllabus_v1',
+  SYLLABUS: 'sru_db_syllabus_v2',
   PREVIOUS_PAPERS: 'sru_db_previous_papers_v2',
   ARTICLES: 'sru_db_articles_v1',
-  ANNOUNCEMENTS: 'sru_db_announcements_v4',
+  ANNOUNCEMENTS: 'sru_db_announcements_v5',
   ADMIN_AUTH: 'sru_admin_token',
 };
 
@@ -71,7 +71,18 @@ export const db = {
     if (
       !Array.isArray(stored) ||
       stored.some((j) => !isJobApplicationOpen(j)) ||
+      !stored.some((j) => j.id === 'job-rrb-ntpc-graduate-level-2026') ||
+      !stored.some((j) => j.id === 'job-rrb-ntpc-undergraduate-10-plus-2-2026') ||
       !stored.some((j) => j.id === 'job-rrb-paramedical-staff-cen-05-2026') ||
+      !stored.some((j) => j.id === 'job-india-post-gds-44228-posts-2026') ||
+      !stored.some((j) => j.id === 'job-upsc-ese-ies-2026') ||
+      !stored.some((j) => j.id === 'job-mpesb-subedar-steno-asi-ministerial-2026') ||
+      stored.some((j) => j.id === 'job-mpesb-subedar-steno-asi-ministerial-2026' && j.totalVacancy.includes('655')) ||
+      !stored.some((j) => j.id === 'job-nvs-class-9th-admission-2026') ||
+      !stored.some((j) => j.id === 'job-mpesb-mp-police-constable-gd-2026') ||
+      !stored.some((j) => j.id === 'job-upessc-up-assistant-professor-2026') ||
+      !stored.some((j) => j.id === 'job-upessc-up-primary-teacher-prt-2026') ||
+      !stored.some((j) => j.id === 'job-upessc-up-pgt-teacher-2026') ||
       stored.some((j) => j.isDemo)
     ) {
       const activeList = INITIAL_JOBS.filter(isJobApplicationOpen);
@@ -81,7 +92,12 @@ export const db = {
     return stored.filter(isJobApplicationOpen);
   },
   getJobBySlug(slug: string): Job | undefined {
-    return this.getJobs().find((j) => j.slug === slug);
+    return this.getJobs().find(
+      (j) =>
+        j.slug === slug ||
+        ((slug === 'india-post-gds-schedule-2-july-2026' || slug === 'india-post-gds-recruitment-online-form') &&
+          j.id.includes('gds'))
+    );
   },
   getJobById(id: string): Job | undefined {
     return this.getJobs().find((j) => j.id === id);
@@ -108,6 +124,12 @@ export const db = {
       !Array.isArray(stored) ||
       stored.length < 30 ||
       stored.some((c) => c.isDemo) ||
+      !stored.some((c) => c.id === 'ac-ssc-cgl-tier-1-exam-city-admit-card-2026') ||
+      !stored.some((c) => c.id === 'ac-indian-navy-ssr-mr-inet-stage-2-admit-card-2026') ||
+      !stored.some((c) => c.id === 'ac-sbi-clerk-junior-associates-exam-date-admit-card-2026') ||
+      !stored.some((c) => c.id === 'ac-rpsc-rajasthan-police-si-2021-reexam-admit-card-2026') ||
+      !stored.some((c) => c.id === 'ac-mpesb-van-rakshak-jail-prahari-pet-schedule-2026') ||
+      !stored.some((c) => c.id === 'ac-upsssc-junior-assistant-typing-test-exam-date-2026') ||
       !stored.some((c) => c.id === 'ac-rrb-section-controller-exam-date-2026')
     ) {
       setStoredItem(STORAGE_KEYS.ADMIT_CARDS, INITIAL_ADMIT_CARDS);
@@ -272,7 +294,12 @@ export const db = {
 
   // Syllabus
   getSyllabuses(): Syllabus[] {
-    return getStoredItem<Syllabus[]>(STORAGE_KEYS.SYLLABUS, INITIAL_SYLLABUS);
+    const stored = getStoredItem<Syllabus[]>(STORAGE_KEYS.SYLLABUS, INITIAL_SYLLABUS);
+    if (!Array.isArray(stored) || stored.length < 15 || stored.some((s) => s.isDemo)) {
+      setStoredItem(STORAGE_KEYS.SYLLABUS, INITIAL_SYLLABUS);
+      return INITIAL_SYLLABUS;
+    }
+    return stored;
   },
   getSyllabusBySlug(slug: string): Syllabus | undefined {
     return this.getSyllabuses().find((s) => s.slug === slug);
@@ -340,7 +367,12 @@ export const db = {
 
   // Announcements
   getAnnouncements(): Announcement[] {
-    return getStoredItem<Announcement[]>(STORAGE_KEYS.ANNOUNCEMENTS, INITIAL_ANNOUNCEMENTS);
+    const stored = getStoredItem<Announcement[]>(STORAGE_KEYS.ANNOUNCEMENTS, INITIAL_ANNOUNCEMENTS);
+    if (!Array.isArray(stored) || !stored.some((a) => a.id === 'ann-india-post-gds-2026')) {
+      setStoredItem(STORAGE_KEYS.ANNOUNCEMENTS, INITIAL_ANNOUNCEMENTS);
+      return INITIAL_ANNOUNCEMENTS;
+    }
+    return stored;
   },
   saveAnnouncement(ann: Announcement): void {
     const list = this.getAnnouncements();

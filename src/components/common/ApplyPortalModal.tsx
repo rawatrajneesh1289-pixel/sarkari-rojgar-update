@@ -29,22 +29,46 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
   title,
 }) => {
   const [copied, setCopied] = useState(false);
+  const [copiedSecondary, setCopiedSecondary] = useState(false);
 
   if (!isOpen) return null;
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(applyUrl);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+  const targetApplyUrl =
+    applyUrl && applyUrl !== '#'
+      ? applyUrl
+      : job?.applyUrl || job?.importantLinks.find((l) => l.type === 'APPLY')?.url || job?.officialWebsite || 'https://esb.mp.gov.in';
+
+  const officialWebsiteUrl = job?.officialWebsite || 'https://esb.mp.gov.in';
+
+  const handleCopy = (url: string, isSec: boolean = false) => {
+    navigator.clipboard.writeText(url);
+    if (isSec) {
+      setCopiedSecondary(true);
+      setTimeout(() => setCopiedSecondary(false), 2500);
+    } else {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    }
   };
 
-  const handleOpenDirect = () => {
+  const handleOpenDirect = (url: string) => {
     try {
-      window.open(applyUrl, '_blank', 'noopener,noreferrer');
+      window.open(url, '_blank', 'noopener,noreferrer');
     } catch (e) {
       console.error(e);
     }
   };
+
+  // Extract application guidelines specific to the current exam
+  const stepsToDisplay =
+    job?.howToApplySteps && job.howToApplySteps.length > 0
+      ? job.howToApplySteps.slice(0, 4)
+      : [
+          'आधिकारिक भर्ती पोर्टल पर जाकर नया प्रोफाइल / रजिस्ट्रेशन (New Registration) पूर्ण करें।',
+          'पंजीकृत क्रेडेंशियल्स से लॉगिन करके संबंधित पद व वरीयता का चयन करें।',
+          'सभी अनिवार्य शैक्षणिक योग्यता विवरण, फोटो व हस्ताक्षर निर्धारित प्रारूप में अपलोड करें।',
+          'ऑनलाइन परीक्षा शुल्क का भुगतान करें और भरे हुए आवेदन पत्र का प्रिंटआउट सुरक्षित रखें।',
+        ];
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5">
@@ -93,9 +117,9 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
             </div>
 
             <div className="p-3 bg-white border border-blue-200 rounded-lg flex items-center justify-between gap-3 font-mono text-xs sm:text-sm text-blue-950 font-bold break-all shadow-2xs">
-              <span className="truncate">{applyUrl}</span>
+              <span className="truncate">{targetApplyUrl}</span>
               <button
-                onClick={handleCopy}
+                onClick={() => handleCopy(targetApplyUrl, false)}
                 className="shrink-0 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-sans text-xs font-semibold rounded-md border border-slate-300 transition flex items-center gap-1"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
@@ -105,10 +129,10 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
 
             <div className="flex flex-col sm:flex-row items-center gap-2.5 pt-1">
               <a
-                href={applyUrl || 'https://www.rrbapply.gov.in/#/auth/landing'}
+                href={targetApplyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={handleOpenDirect}
+                onClick={() => handleOpenDirect(targetApplyUrl)}
                 className="w-full sm:flex-1 py-3 px-4 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold rounded-xl text-sm transition shadow-md flex items-center justify-center gap-2"
               >
                 <span>सीधे आधिकारिक पोर्टल खोलें (Open Portal)</span>
@@ -116,7 +140,7 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
               </a>
 
               <button
-                onClick={handleCopy}
+                onClick={() => handleCopy(targetApplyUrl, false)}
                 className={`w-full sm:w-auto py-3 px-4 font-bold rounded-xl text-sm border transition flex items-center justify-center gap-2 ${
                   copied
                     ? 'bg-emerald-50 border-emerald-300 text-emerald-700'
@@ -129,32 +153,30 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
             </div>
           </div>
 
-          {/* Quick Dual Link Options for RRB */}
+          {/* Quick Dual Link Options for this Recruitment */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
               <div className="flex items-center justify-between">
-                <span className="font-bold text-xs text-slate-900">Direct Auth Landing Portal</span>
+                <span className="font-bold text-xs text-slate-900">
+                  {job?.organization ? `${job.organization.slice(0, 24)}... Apply Link` : 'Direct Apply Link'}
+                </span>
                 <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded">Active</span>
               </div>
               <p className="text-[11px] font-mono text-slate-500 break-all">
-                https://www.rrbapply.gov.in/#/auth/landing
+                {targetApplyUrl}
               </p>
               <div className="flex items-center gap-2 pt-1">
                 <a
-                  href="https://www.rrbapply.gov.in/#/auth/landing"
+                  href={targetApplyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-1.5 px-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1"
                 >
-                  <span>Open Landing</span>
+                  <span>Open Apply Link</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
                 <button
-                  onClick={() => {
-                    navigator.clipboard.writeText('https://www.rrbapply.gov.in/#/auth/landing');
-                    setCopied(true);
-                    setTimeout(() => setCopied(false), 2000);
-                  }}
+                  onClick={() => handleCopy(targetApplyUrl, false)}
                   className="py-1.5 px-2.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-medium rounded-lg"
                 >
                   Copy
@@ -164,31 +186,27 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
 
             <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
               <div className="flex items-center justify-between">
-                <span className="font-bold text-xs text-slate-900">RRB Central Official Portal</span>
+                <span className="font-bold text-xs text-slate-900">Official Board Website</span>
                 <span className="text-[10px] bg-blue-100 text-blue-800 font-bold px-1.5 py-0.5 rounded">Official</span>
               </div>
               <p className="text-[11px] font-mono text-slate-500 break-all">
-                https://rrb.gov.in
+                {officialWebsiteUrl}
               </p>
               <div className="flex items-center gap-2 pt-1">
                 <a
-                  href="https://rrb.gov.in"
+                  href={officialWebsiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-1.5 px-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1"
                 >
-                  <span>Open rrb.gov.in</span>
+                  <span>Open Website</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
                 <button
-                  onClick={() => {
-                    navigator.clipboard.writeText('https://rrb.gov.in');
-                    setCopied(true);
-                    setTimeout(() => setCopied(false), 2000);
-                  }}
+                  onClick={() => handleCopy(officialWebsiteUrl, true)}
                   className="py-1.5 px-2.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-medium rounded-lg"
                 >
-                  Copy
+                  {copiedSecondary ? '✓' : 'Copy'}
                 </button>
               </div>
             </div>
@@ -205,37 +223,19 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
             </div>
           </div>
 
-          {/* Quick Step Guide */}
+          {/* Quick Step Guide - Dynamically rendered from the specific Exam Guidelines */}
           <div className="space-y-2">
             <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-blue-600" />
-              <span>फॉर्म भरने के 4 मुख्य चरण (Quick 4 Steps):</span>
+              <span>{job?.title ? `${job.postName || job.title} - आवेदन चरण:` : 'फॉर्म भरने के मुख्य चरण:'}</span>
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                <span className="font-bold text-blue-900 block mb-0.5">1. खाता बनाएं (Registration)</span>
-                <p className="text-slate-600">
-                  rrb.gov.in पर जाकर आधार कार्ड व ओटीपी द्वारा न्यू रजिस्ट्रेशन करें।
-                </p>
-              </div>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                <span className="font-bold text-blue-900 block mb-0.5">2. भर्ती का चयन करें</span>
-                <p className="text-slate-600">
-                  लॉगिन कर "CEN 05/2026 Paramedical Staff" चुनें एवं पद वरीयता भरें।
-                </p>
-              </div>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                <span className="font-bold text-blue-900 block mb-0.5">3. विवरण व दस्तावेज अपलोड</span>
-                <p className="text-slate-600">
-                  शैक्षणिक योग्यता अंक, सफेद बैकग्राउंड फोटो (30-70KB) व हस्ताक्षर अपलोड करें।
-                </p>
-              </div>
-              <div className="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                <span className="font-bold text-blue-900 block mb-0.5">4. फीस भुगतान व रिफंड खाता</span>
-                <p className="text-slate-600">
-                  ऑनलाइन फीस जमा करें और अपना सही बैंक खाता दर्ज करें ताकि CBT के बाद रिफंड प्राप्त हो सके।
-                </p>
-              </div>
+              {stepsToDisplay.map((step, idx) => (
+                <div key={idx} className="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                  <span className="font-bold text-blue-900 block mb-0.5">चरण {idx + 1}:</span>
+                  <p className="text-slate-700 leading-relaxed">{step}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -265,7 +265,7 @@ export const ApplyPortalModal: React.FC<ApplyPortalModalProps> = ({
             बंद करें (Close)
           </button>
           <button
-            onClick={handleOpenDirect}
+            onClick={() => handleOpenDirect(targetApplyUrl)}
             className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold shadow-xs transition flex items-center gap-1.5"
           >
             <span>पोर्टल पर जाएं</span>

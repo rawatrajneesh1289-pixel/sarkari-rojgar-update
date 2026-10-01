@@ -486,34 +486,6 @@ export const JOBS_PART_1: Job[] = [
     officialWebsite: 'https://upanganwadibharti.in',
   }),
 
-  // 18. India Post GDS Schedule II July 2026
-  buildJob({
-    id: 'job-india-post-gds-july-2026',
-    slug: 'india-post-gds-schedule-2-july-2026',
-    title: 'India Post GDS Schedule II July 2026 Online Form',
-    titleHi: 'इंडिया पोस्ट ग्रामीण डाक सेवक (GDS) शेड्यूल-II जुलाई 2026 - 44,228 पद',
-    organization: 'Department of Posts (India Post - Ministry of Communications)',
-    organizationHi: 'भारतीय डाक विभाग (भारत सरकार)',
-    postName: 'Gramin Dak Sevak (Branch Postmaster BPM / Assistant Branch Postmaster ABPM)',
-    totalVacancy: '44,228 Posts',
-    qualification: '10th Class (Secondary School) pass with Mathematics and English + Local Language knowledge',
-    category: 'Central Government',
-    state: 'All India',
-    status: 'OPEN',
-    shortDescription: 'India Post has invited online applications for 44,228 Gramin Dak Sevak vacancies across 23 postal circles in India. Selection purely on 10th merit basis.',
-    shortDescriptionHi: 'भारतीय डाक विभाग में बिना किसी परीक्षा के 10वीं के अंकों के आधार पर 44,228 ग्रामीण डाक सेवक पदों पर भर्ती हेतु आवेदन की अंतिम तिथि 19/09/2026।',
-    applicationStartDate: '22/08/2026',
-    applicationLastDate: '19/09/2026',
-    feeLastDate: '19/09/2026',
-    correctionLastDate: '22/09/2026',
-    feeGeneralObcEws: '₹ 100/- (Male General / OBC / EWS)',
-    feeScStPh: '₹ 0/- (All Females, SC, ST, PwD Candidates Free)',
-    minAge: '18 Years',
-    maxAge: '40 Years',
-    salaryScale: 'BPM: ₹ 12,000 - 29,380/- | ABPM/Dak Sevak: ₹ 10,000 - 24,470/- TRCA',
-    officialWebsite: 'https://indiapostgdsonline.gov.in',
-  }),
-
   // 19. IBPS RRB Gramin Bank 15th
   buildJob({
     id: 'job-ibps-rrb-15th-2026',

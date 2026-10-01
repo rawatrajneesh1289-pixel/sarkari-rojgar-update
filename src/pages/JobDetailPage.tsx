@@ -165,7 +165,7 @@ export const JobDetailPage: React.FC<JobDetailPageProps> = ({ slug }) => {
               {/* Quick Direct Action Bar for Active Links */}
               <div className="mt-4 pt-4 border-t border-slate-100 flex flex-wrap items-center gap-2 sm:gap-3">
                 <a
-                  href={job.importantLinks.find((l) => l.type === 'APPLY')?.url || job.officialWebsite || 'https://rrb.gov.in'}
+                  href={job.importantLinks.find((l) => l.type === 'APPLY')?.url || job.applyUrl || job.officialWebsite || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setShowApplyModal(true)}
@@ -188,8 +188,9 @@ export const JobDetailPage: React.FC<JobDetailPageProps> = ({ slug }) => {
                   onClick={() => {
                     const applyLink =
                       job.importantLinks.find((l) => l.type === 'APPLY')?.url ||
+                      job.applyUrl ||
                       job.officialWebsite ||
-                      'https://rrb.gov.in';
+                      window.location.href;
                     navigator.clipboard.writeText(applyLink);
                     setCopiedLink(true);
                     setTimeout(() => setCopiedLink(false), 2500);
@@ -465,7 +466,7 @@ export const JobDetailPage: React.FC<JobDetailPageProps> = ({ slug }) => {
         isOpen={showNotificationModal}
         onClose={() => setShowNotificationModal(false)}
         job={job}
-        notificationUrl={job.importantLinks.find((l) => l.type === 'NOTIFICATION')?.url || job.officialWebsite || 'https://rrb.gov.in'}
+        notificationUrl={job.importantLinks.find((l) => l.type === 'NOTIFICATION')?.url || job.notificationUrl || job.officialWebsite || '#'}
         title={job.title}
       />
 
@@ -473,7 +474,7 @@ export const JobDetailPage: React.FC<JobDetailPageProps> = ({ slug }) => {
         isOpen={showApplyModal}
         onClose={() => setShowApplyModal(false)}
         job={job}
-        applyUrl={job.importantLinks.find((l) => l.type === 'APPLY')?.url || job.officialWebsite || 'https://rrb.gov.in'}
+        applyUrl={job.importantLinks.find((l) => l.type === 'APPLY')?.url || job.applyUrl || job.officialWebsite || '#'}
         title={job.title}
       />
     </>

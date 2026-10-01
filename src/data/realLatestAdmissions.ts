@@ -2,6 +2,56 @@ import { AdmissionUpdate } from '../types';
 
 export const REAL_LATEST_ADMISSIONS: AdmissionUpdate[] = [
   {
+    id: 'adm-nvs-class-9th-2026',
+    slug: 'nvs-class-9th-admission-lateral-entry-selection-test',
+    courseOrExam: 'NVS Class 9th Lateral Entry Admission Online Form 2026 (JNVST Class IX)',
+    courseOrExamHi: 'नवोदय विद्यालय कक्षा 9वीं लेटरल एंट्री प्रवेश परीक्षा (JNVST 2026-27) ऑनलाइन आवेदन',
+    institution: 'Navodaya Vidyalaya Samiti (NVS), Ministry of Education, Govt. of India',
+    level: 'School',
+    applicationStart: '03/09/2026',
+    applicationLastDate: '30/09/2026',
+    eligibility: 'संबंधित जिले के मान्यता प्राप्त विद्यालय में शैक्षणिक सत्र 2026-27 में कक्षा 8वीं में अध्ययनरत छात्र। जन्मतिथि 01/05/2012 से 31/07/2014 के मध्य अनिवार्य।',
+    applyUrl: 'https://cbseitms.nic.in',
+    officialNotificationUrl: 'https://navodaya.gov.in',
+    totalSeats: 'देश के 650+ जवाहर नवोदय विद्यालयों में रिक्त सीटें (मेरिट अनुसार)',
+    examDate: 'फरवरी 2027 / 10 अप्रैल 2027 (Tentative Selection Test)',
+    ageLimit: 'जन्मतिथि 01 मई 2012 से 31 जुलाई 2014 के मध्य (सभी वर्गों हेतु समान)',
+    feeDetails: {
+      generalOBC: '₹ 0/- (पूर्णतः निःशुल्क / No Application Fee)',
+      scSt: '₹ 0/- (पूर्णतः निःशुल्क / No Application Fee)',
+    },
+    description: 'नवोदय विद्यालय समिति (NVS) द्वारा सत्र 2026-27 में कक्षा 9वीं की रिक्त सीटों को भरने के लिए जवाहर नवोदय विद्यालय चयन परीक्षा (JNVST Class IX Lateral Entry 2026) के लिए ऑनलाइन आवेदन आमंत्रित किए गए हैं। आवेदन cbseitms.nic.in पोर्टल पर पूर्णतः निःशुल्क भरा जा सकता है।',
+    importantDates: [
+      { event: 'ऑनलाइन आवेदन प्रारंभ', date: '03/09/2026' },
+      { event: 'ऑनलाइन आवेदन की अंतिम तिथि', date: '30/09/2026' },
+      { event: 'आवेदन पत्र संशोधन (Correction Window)', date: '05/10/2026' },
+      { event: 'प्रवेश पत्र (Admit Card) जारी', date: 'परीक्षा से 15 दिन पूर्व' },
+      { event: 'कक्षा 9वीं चयन परीक्षा तिथि', date: 'फरवरी 2027 / अप्रैल 2027' },
+      { event: 'प्रवेश चयन परिणाम व मेरिट सूची', date: 'मार्च 2027 / मई 2027' },
+    ],
+    stepsToApply: [
+      'नवोदय विद्यालय समिति के आधिकारिक पोर्टल navodaya.gov.in अथवा cbseitms.nic.in पर जाएं।',
+      '"Click here to submit online application form for Class IX Lateral Entry Selection Test 2026-27" लिंक पर क्लिक करें।',
+      'राज्य एवं जिले का चयन करें जहां अभ्यर्थी वर्तमान में कक्षा 8वीं में अध्ययनरत है।',
+      'अभ्यर्थी का नाम, जन्म तिथि, आधार नंबर और माता-पिता का नाम दर्ज करें।',
+      'छात्र की हाल की पासपोर्ट साइज फोटो, छात्र के हस्ताक्षर एवं माता/पिता के हस्ताक्षर अपलोड करें (10-100 KB)।',
+      'भरी हुई जानकारियों की पुनः जांच करें और फाइनल सबमिट कर पावती रसीद सुरक्षित रख लें।',
+    ],
+    faqs: [
+      {
+        question: 'नवोदय कक्षा 9वीं प्रवेश फॉर्म भरने की अंतिम तिथि क्या है?',
+        answer: 'कक्षा 9वीं लेटरल एंट्री 2026-27 के लिए ऑनलाइन आवेदन की अंतिम तिथि 30 सितंबर 2026 है।',
+      },
+      {
+        question: 'क्या नवोदय विद्यालय में छात्र-छात्राओं से कोई मासिक फीस ली जाती है?',
+        answer: 'नहीं, जवाहर नवोदय विद्यालयों में अध्ययन, आवास, भोजन, गणवेश एवं पुस्तकें भारत सरकार द्वारा पूर्णतः निःशुल्क प्रदान की जाती हैं।',
+      },
+    ],
+    publishedAt: '2026-09-16',
+    updatedAt: '2026-09-16',
+    isDemo: false,
+  },
+  {
     id: 'adm-iit-jam-2027',
     slug: 'iit-jam-2027-msc-phd-admission-entrance-exam',
     courseOrExam: 'IIT JAM 2027 Entrance Exam (M.Sc / Integrated Ph.D Admission)',

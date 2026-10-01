@@ -278,7 +278,7 @@ export const ImportantLinks: React.FC<ImportantLinksProps> = ({
         isOpen={isNotificationModalOpen}
         onClose={() => setIsNotificationModalOpen(false)}
         job={job}
-        notificationUrl={selectedNotificationUrl || 'https://rrb.gov.in'}
+        notificationUrl={selectedNotificationUrl || job?.notificationUrl || job?.officialWebsite || '#'}
         title={examOrJobTitle}
       />
 
@@ -287,7 +287,7 @@ export const ImportantLinks: React.FC<ImportantLinksProps> = ({
         isOpen={isApplyModalOpen}
         onClose={() => setIsApplyModalOpen(false)}
         job={job}
-        applyUrl={selectedApplyUrl || 'https://rrb.gov.in'}
+        applyUrl={selectedApplyUrl || job?.applyUrl || job?.officialWebsite || '#'}
         title={examOrJobTitle}
       />
     </>

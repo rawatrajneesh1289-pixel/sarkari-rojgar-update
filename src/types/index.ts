@@ -277,11 +277,12 @@ export interface Syllabus {
     subjectName: string;
     topics: string[];
   }[];
+  preparationTips?: string[];
   selectionProcess: string[];
   pdfDownloadUrl?: string;
   publishedAt: string;
   updatedAt: string;
-  isDemo: boolean;
+  isDemo?: boolean;
 }
 
 export interface PreviousPaper {

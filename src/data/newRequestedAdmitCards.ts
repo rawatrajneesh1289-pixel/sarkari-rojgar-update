@@ -1,6 +1,295 @@
 import { AdmitCard } from '../types';
 
 export const NEW_REQUESTED_ADMIT_CARDS: AdmitCard[] = [
+  // 0. SSC CGL Tier 1 Exam City / Application Status & Admit Card 2026
+  {
+    id: 'ac-ssc-cgl-tier-1-exam-city-admit-card-2026',
+    slug: 'ssc-cgl-tier-1-exam-city-intimation-admit-card-2026',
+    examName: 'SSC CGL Tier 1 Exam City / Application Status & Admit Card 2026',
+    examNameHi: 'कर्मचारी चयन आयोग एसएससी सीजीएल टियर-1 परीक्षा शहर (Exam City Slip), आवेदन स्थिति एवं एडमिट कार्ड 2026',
+    organization: 'Staff Selection Commission (SSC / कर्मचारी चयन आयोग)',
+    postName: 'Combined Graduate Level (CGL) 2026 - Assistant Section Officer (ASO), Inspector (Income Tax, Central Excise, Preventive Officer), Sub-Inspector (CBI), Auditor, Accountant, JSO, Upper Division Clerk & Various Group B & C Posts',
+    totalVacancy: '10,731+ Posts (Group B & C across Ministries & Departments)',
+    examDate: '30/09/2026 से 30/10/2026 (Computer Based Test CBT Mode)',
+    status: 'Released',
+    releaseDate: '22/09/2026 (Exam City Slip & Application Status Live | Admit Card 3-4 days before exam date)',
+    downloadUrl: 'https://ssc.gov.in',
+    officialNotificationUrl: 'https://ssc.gov.in',
+    instructions: [
+      'एसएससी सीजीएल टियर-1 परीक्षा 30 सितंबर 2026 से 30 अक्टूबर 2026 तक देश भर के विभिन्न परीक्षा केंद्रों पर बहु-पारियों में आयोजित की जाएगी।',
+      'परीक्षा शहर सूचना पर्ची (Exam City Intimation Slip) केवल आवंटित परीक्षा शहर, परीक्षा तिथि और शिफ्ट जानने हेतु जारी की गई है। यह परीक्षा केंद्र में प्रवेश हेतु मान्य प्रवेश पत्र नहीं है।',
+      'मूल एडमिट कार्ड (Hall Ticket / Admission Certificate) उम्मीदवार की संबंधित परीक्षा तिथि से 3 से 4 दिन पूर्व आयोग के नए पोर्टल ssc.gov.in पर डाउनलोड हेतु उपलब्ध होगा।',
+      'परीक्षा केंद्र पर मूल एडमिट कार्ड का स्पष्ट प्रिंटआउट, 2 नवीनतम पासपोर्ट साइज रंगीन फोटो, तथा मूल फोटोयुक्त पहचान पत्र (आधार कार्ड/ई-आधार, वोटर आईडी, ड्राइविंग लाइसेंस, पैन कार्ड, पासपोर्ट) जिसमें जन्मतिथि वही अंकित हो जो आवेदन फॉर्म में है, अनिवार्य रूप से साथ लाना होगा।',
+      'यदि पहचान पत्र में जन्मतिथि (DOB) का पूरा विवरण (दिन/माह/वर्ष) अंकित नहीं है, तो जन्मतिथि के प्रमाण हेतु 10वीं की मूल अंकसूची/प्रमाण पत्र प्रस्तुत करना अनिवार्य होगा।',
+      'परीक्षा हॉल में किसी भी प्रकार का इलेक्ट्रॉनिक गैजेट, ब्लूटूथ, मोबाइल फोन, स्मार्टवॉच, पेजर, ईयरफोन, कैलकुलेटर या धातु की वस्तुएं ले जाना सख्त प्रतिबंधित है।',
+    ],
+    stepsToDownload: [
+      'चरण 1: कर्मचारी चयन आयोग के नए आधिकारिक पोर्टल ssc.gov.in पर जाएं।',
+      'चरण 2: होमपेज के शीर्ष दाईं ओर "Login or Register" विकल्प पर क्लिक करें।',
+      'चरण 3: अपना पंजीकरण नंबर / यूजरनेम (Registration Number) और पासवर्ड (Password) दर्ज करें।',
+      'चरण 4: स्क्रीन पर दिख रहा सुरक्षा कैप्चा कोड भरकर "Login" बटन पर क्लिक करें।',
+      'चरण 5: कैंडिडेट डैशबोर्ड में "Combined Graduate Level Examination (Tier-I), 2026" के अंतर्गत "View Exam City / Application Status" पर क्लिक करें।',
+      'चरण 6: अपनी आवंटित परीक्षा तिथि, परीक्षा शहर, रिपोर्टिंग समय और शिफ्ट विवरण चेक करें तथा स्लिप सेव/डाउनलोड करें।',
+      'चरण 7: परीक्षा तिथि से 3-4 दिन पूर्व इसी डैशबोर्ड से "Download Admit Card / Admission Certificate" बटन पर क्लिक करके अपना फाइनल एडमिट कार्ड प्रिंट करें।',
+    ],
+    faqs: [
+      {
+        question: 'SSC CGL Tier 1 परीक्षा शहर (Exam City) और स्टेटस कैसे चेक करें?',
+        answer: 'उम्मीदवार ssc.gov.in पर अपने रजिस्ट्रेशन नंबर और पासवर्ड के जरिए लॉगिन करके कैंडिडेट डैशबोर्ड में "View City Slip / Status" पर क्लिक करके अपना आवंटित परीक्षा शहर और तिथि देख सकते हैं।',
+      },
+      {
+        question: 'एसएससी सीजीएल 2026 टियर 1 परीक्षा कब से कब तक आयोजित होगी?',
+        answer: 'कर्मचारी चयन आयोग द्वारा सीजीएल टियर 1 की कंप्यूटर आधारित परीक्षा (CBT) 30 सितंबर 2026 से 30 अक्टूबर 2026 के मध्य विभिन्न पारियों में आयोजित की जा रही है।',
+      },
+      {
+        question: 'क्या परीक्षा शहर की पर्ची (City Slip) दिखाकर परीक्षा केंद्र में प्रवेश मिल सकता है?',
+        answer: 'नहीं! सिटी इंटिमेशन स्लिप केवल यात्रा योजना बनाने हेतु है। परीक्षा केंद्र में प्रवेश केवल मूल एडमिट कार्ड (Admission Certificate) के साथ ही मिलेगा, जो संबंधित अभ्यर्थी की परीक्षा तिथि से 3-4 दिन पहले उपलब्ध होता है।',
+      },
+      {
+        question: 'परीक्षा में नेगेटिव मार्किंग का क्या नियम है?',
+        answer: 'एसएससी सीजीएल टियर-1 में कुल 100 वस्तुनिष्ठ प्रश्न (200 अंक) होते हैं। इसमें प्रत्येक गलत उत्तर के लिए 0.50 अंक (1/4 नेगेटिव मार्किंग) काटा जाता है।',
+      },
+      {
+        question: 'एसएससी सीजीएल टियर-1 में कौन-कौन से विषय शामिल हैं?',
+        answer: 'टियर-1 परीक्षा में 4 खंड होते हैं: सामान्य बुद्धिमत्ता एवं तर्कशक्ति (25 प्रश्न, 50 अंक), सामान्य जागरूकता (25 प्रश्न, 50 अंक), मात्रात्मक योग्यता (25 प्रश्न, 50 अंक) और अंग्रेजी समझ (25 प्रश्न, 50 अंक)। कुल समय 60 मिनट (1 घंटा) होता है।',
+      },
+    ],
+    publishedAt: '2026-09-22',
+    updatedAt: '2026-09-25',
+    isDemo: false,
+  },
+
+  // 1. Indian Navy SSR / MR INET Stage II Admit Card 2026
+  {
+    id: 'ac-indian-navy-ssr-mr-inet-stage-2-admit-card-2026',
+    slug: 'indian-navy-ssr-mr-inet-stage-2-admit-card-2026',
+    examName: 'Indian Navy SSR / MR INET Stage II Admit Card 2026',
+    examNameHi: 'भारतीय नौसेना अग्निवीर SSR / MR स्टेज-II एडमिट कार्ड एवं कॉल लेटर 2026',
+    organization: 'Indian Navy (भारतीय नौसेना)',
+    postName: 'Agniveer SSR (Senior Secondary Recruit) & MR (Matric Recruit) - 01/2026 & 02/2026 Batches',
+    totalVacancy: '4,000+ Posts (SSR & MR Male/Female)',
+    examDate: '24/09/2026 to 03/10/2026 (Physical Fitness Test, Written Test & Medical)',
+    status: 'Released',
+    releaseDate: '16/09/2026 (Live Now)',
+    downloadUrl: 'https://agniveer.navydmpr.in',
+    officialNotificationUrl: 'https://www.joinindiannavy.gov.in',
+    instructions: [
+      'स्टेज-1 (INET कंप्यूटर आधारित परीक्षा) में चयनित अभ्यर्थी ही स्टेज-2 परीक्षा (PFT, लिखित परीक्षा एवं प्रारंभिक चिकित्सा परीक्षण) हेतु कॉल लेटर डाउनलोड करने के पात्र हैं।',
+      'कॉल लेटर के साथ उम्मीदवार को मूल आधार कार्ड / फोटोयुक्त पहचान पत्र और स्व-घोषणा पत्र अनिवार्य रूप से साथ लाना होगा।',
+      'शारीरिक दक्षता परीक्षण (PFT): 1.6 किमी दौड़ (पुरुष: 6 मिनट 30 सेकंड, महिला: 8 मिनट), उठक-बैठक (पुरुष: 20, महिला: 15), पुश-अप्स (पुरुष: 15) तथा बेंट नी सिट-अप्स (महिला: 10)। स्पोर्ट्स जूते व उपयुक्त किट में उपस्थित हों।',
+      'मूल शैक्षणिक प्रमाण पत्र (10वीं/12वीं अंकसूची व सनद), मूल निवास प्रमाण पत्र, जाति प्रमाण पत्र, चरित्र प्रमाण पत्र तथा 16 रंगीन पासपोर्ट साइज फोटोग्राफ लेकर निर्धारित केंद्र पर रिपोर्ट करें।',
+    ],
+    stepsToDownload: [
+      'भारतीय नौसेना के आधिकारिक भर्ती पोर्टल agniveer.navydmpr.in अथवा joinindiannavy.gov.in पर जाएं।',
+      '"Agniveer Navy SSR / MR Stage-II Call Letter 2026" लिंक पर क्लिक करें।',
+      'अपना पंजीकृत ईमेल आईडी / मोबाइल नंबर (Registered Mobile No / Email ID) और पासवर्ड दर्ज करें।',
+      'स्क्रीन पर दिख रहा सुरक्षा कैप्चा कोड भरकर "Login" बटन पर क्लिक करें।',
+      'डैशबोर्ड से "Stage-II Admit Card / Hall Ticket" डाउनलोड करें और A4 साइज पेपर पर स्पष्ट प्रिंटआउट निकालें।',
+    ],
+    faqs: [
+      {
+        question: 'नेवी अग्निवीर SSR/MR स्टेज 2 एडमिट कार्ड कैसे डाउनलोड करें?',
+        answer: 'अभ्यर्थी agniveer.navydmpr.in पर अपने पंजीकृत मोबाइल नंबर या ईमेल आईडी और पासवर्ड से लॉगिन करके स्टेज 2 कॉल लेटर डाउनलोड कर सकते हैं।',
+      },
+      {
+        question: 'स्टेज-2 में कौन-कौन से परीक्षण आयोजित किए जाएंगे?',
+        answer: 'स्टेज-2 चयन प्रक्रिया में शारीरिक स्वास्थ्य परीक्षण (PFT), लिखित परीक्षा (Written Examination) तथा भर्ती चिकित्सा परीक्षण (Recruitment Medical Examination) सम्मिलित हैं।',
+      },
+      {
+        question: 'क्या रिपोर्टिंग समय पर उपस्थित होना अनिवार्य है?',
+        answer: 'हाँ, कॉल लेटर में दिए गए निर्धारित रिपोर्टिंग समय से कम से कम 30 मिनट पूर्व आवंटित नेवी चयन केंद्र (INS/Designated Center) पर पहुंचना अनिवार्य है।',
+      },
+    ],
+    publishedAt: '2026-09-17',
+    updatedAt: '2026-09-17',
+    isDemo: false,
+  },
+
+  // 2. SBI Junior Associates (Clerk) New Exam Date 2026
+  {
+    id: 'ac-sbi-clerk-junior-associates-exam-date-admit-card-2026',
+    slug: 'sbi-junior-associates-clerk-new-exam-date-admit-card-2026',
+    examName: 'SBI Junior Associates Clerk New Exam Date 2026',
+    examNameHi: 'भारतीय स्टेट बैंक जूनियर एसोसिएट्स (क्लर्क) नई परीक्षा तिथि एवं प्रीलिम्स एडमिट कार्ड 2026',
+    organization: 'State Bank of India (SBI - Central Recruitment & Promotion Department)',
+    postName: 'Junior Associates (Customer Support & Sales) - Regular & Special Backlog',
+    totalVacancy: '12,500+ Posts (All India Branches)',
+    examDate: '26/09/2026 & 27/09/2026 (Prelims) | Mains: 23/11/2026',
+    status: 'Released',
+    releaseDate: '17/09/2026 (Exam Notice & Call Letter Live)',
+    downloadUrl: 'https://ibpsonline.ibps.in/sbijajul26/',
+    officialNotificationUrl: 'https://sbi.bank.in/web/careers',
+    instructions: [
+      'एसबीआई क्लर्क प्रारंभिक परीक्षा 2026 नई तिथियों के अनुसार 26 और 27 सितंबर 2026 को देश भर के विभिन्न केंद्रों पर ऑनलाइन सीबीटी माध्यम से आयोजित की जाएगी।',
+      'कॉल लेटर के साथ पासपोर्ट साइज की वही फोटो ले जाना अनिवार्य है जो ऑनलाइन आवेदन फॉर्म में अपलोड की गई थी (अतिरिक्त 2 फोटो उपस्थिति पत्रक हेतु साथ रखें)।',
+      'मूल वैध पहचान पत्र (आधार कार्ड, पैन कार्ड, पासपोर्ट, वोटर आईडी या ड्राइविंग लाइसेंस) एवं उसकी एक स्वप्रमाणित छायाप्रति केंद्र पर जमा करानी होगी।',
+      'परीक्षा कक्ष में किसी भी प्रकार का इलेक्ट्रॉनिक उपकरण, कैलकुलेटर, डिजिटल घड़ी, बेल्ट या पर्स ले जाना सख्त वर्जित है।',
+    ],
+    stepsToDownload: [
+      'एसबीआई की आधिकारिक करियर वेबसाइट sbi.bank.in/web/careers अथवा आईबीपीएस पोर्टल ibpsonline.ibps.in पर जाएं।',
+      '"RECRUITMENT OF JUNIOR ASSOCIATES (CUSTOMER SUPPORT & SALES) - Download Preliminary Exam Call Letter" लिंक पर क्लिक करें।',
+      'अपनी भाषा (English / Hindi) का चयन करें।',
+      'अपना रजिस्ट्रेशन नंबर / रोल नंबर (Registration No / Roll No) और पासवर्ड / जन्मतिथि (DD-MM-YY) दर्ज करें।',
+      'कैप्चा कोड भरकर "Login" करें और अपना प्रीलिम्स कॉल लेटर पीडीएफ डाउनलोड कर प्रिंट निकालें।',
+    ],
+    faqs: [
+      {
+        question: 'SBI क्लर्क 2026 प्रीलिम्स परीक्षा की नई तिथि क्या है?',
+        answer: 'एसबीआई क्लर्क प्रीलिम्स परीक्षा 26 सितंबर और 27 सितंबर 2026 को ऑनलाइन सीबीटी मोड में आयोजित की जा रही है। मुख्य परीक्षा 23 नवंबर 2026 को निर्धारित है।',
+      },
+      {
+        question: 'एसबीआई क्लर्क प्रीलिम्स परीक्षा में क्या नेगेटिव मार्किंग है?',
+        answer: 'हाँ, वस्तुनिष्ठ परीक्षा में प्रत्येक गलत उत्तर के लिए 1/4 (0.25) अंक काटे जाएंगे।',
+      },
+      {
+        question: 'कॉल लेटर डाउनलोड करने के लिए किन क्रेडेंशियल्स की आवश्यकता होगी?',
+        answer: 'अभ्यर्थी को अपना पंजीकरण नंबर (Registration Number) और पासवर्ड अथवा जन्मतिथि (DD-MM-YYYY) दर्ज करनी होगी।',
+      },
+    ],
+    publishedAt: '2026-09-17',
+    updatedAt: '2026-09-17',
+    isDemo: false,
+  },
+
+  // 3. RPSC Rajasthan Police Sub Inspector 2021 Admit Card 2026 (Re-Exam)
+  {
+    id: 'ac-rpsc-rajasthan-police-si-2021-reexam-admit-card-2026',
+    slug: 'rpsc-rajasthan-police-sub-inspector-2021-re-exam-admit-card-2026',
+    examName: 'RPSC Rajasthan Police Sub Inspector 2021 Admit Card 2026 (Re-Exam)',
+    examNameHi: 'राजस्थान लोक सेवा आयोग (RPSC) उपनिरीक्षक / प्लाटून कमांडर 2021 पुन: परीक्षा एडमिट कार्ड 2026',
+    organization: 'Rajasthan Public Service Commission (RPSC), Ajmer',
+    postName: 'Sub Inspector (AP/IB/MBC) & Platoon Commander (RAC) 2021 Recruitment',
+    totalVacancy: '859 Posts',
+    examDate: '20/09/2026 (रविवार - 2 पारियों में परीक्षा)',
+    status: 'Released',
+    releaseDate: '17/09/2026 (Admit Card Released via SSO Portal)',
+    downloadUrl: 'https://sso.rajasthan.gov.in',
+    officialNotificationUrl: 'https://rpsc.rajasthan.gov.in',
+    instructions: [
+      'माननीय उच्च न्यायालय एवं शासन के निर्णय अनुसार वर्ष 2021 की रद्द उपनिरीक्षक भर्ती की पुन: लिखित परीक्षा 20 सितंबर 2026 को आयोजित की जा रही है।',
+      'अभ्यर्थी परीक्षा केंद्र पर परीक्षा प्रारंभ होने के नियत समय से 60 मिनट (1 घंटा) पूर्व अनिवार्य रूप से उपस्थित हो जाएं। परीक्षा प्रारंभ होने से 60 मिनट पूर्व केंद्र का प्रवेश द्वार बंद कर दिया जाएगा।',
+      'पहचान हेतु मूल आधार कार्ड (रंगीन एवं स्पष्ट फोटोयुक्त) लाना अनिवार्य है। आधार कार्ड के अभाव में अन्य मूल सरकारी पहचान पत्र (मतदाता पहचान पत्र, पासपोर्ट, ड्राइविंग लाइसेंस) मान्य होंगे।',
+      'परीक्षा केंद्र में केवल नीला पारदर्शी बॉलपॉइंट पेन एवं मूल एडमिट कार्ड ले जाने की अनुमति होगी।',
+    ],
+    stepsToDownload: [
+      'राजस्थान सरकार के एसएसओ पोर्टल sso.rajasthan.gov.in अथवा rpsc.rajasthan.gov.in पर जाएं।',
+      'अपने SSO ID / यूजरनेम एवं पासवर्ड के माध्यम से लॉगिन करें।',
+      '"Recruitment Portal" (रिक्रूटमेंट पोर्टल) ऐप आइकन पर क्लिक करें।',
+      'शीर्ष मेनू में "Get Admit Card" विकल्प का चयन करें।',
+      '"Sub Inspector Comb. Comp. Exam 2021 (Re-Exam 2026)" के सामने दिए गए "Get Admit Card" लिंक पर क्लिक करें।',
+      'प्रवेश पत्र स्क्रीन पर खुल जाएगा, इसे डाउनलोड करें तथा प्रवेश पत्र पर दिए गए सभी निर्देशों का अवलोकन करें।',
+    ],
+    faqs: [
+      {
+        question: 'RPSC राजस्थान पुलिस एसआई 2021 पुन: परीक्षा कब आयोजित होगी?',
+        answer: 'आरपीएससी द्वारा एसआई 2021 की पुन: लिखित परीक्षा 20 सितंबर 2026 को दो पारियों (सामान्य हिंदी एवं सामान्य ज्ञान/विज्ञान) में आयोजित की जा रही है।',
+      },
+      {
+        question: 'एडमिट कार्ड किस पोर्टल से डाउनलोड किया जा सकता है?',
+        answer: 'अभ्यर्थी राजस्थान सिंगल साइन ऑन (SSO Portal: sso.rajasthan.gov.in) पर अपने यूजर आईडी व पासवर्ड से लॉगिन कर रिक्रूटमेंट पोर्टल से एडमिट कार्ड डाउनलोड कर सकते हैं।',
+      },
+      {
+        question: 'परीक्षा केंद्र पर कितने समय पहले पहुंचना अनिवार्य है?',
+        answer: 'परीक्षा केंद्र में प्रवेश परीक्षा शुरू होने से ठीक 1 घंटा पूर्व बंद कर दिया जाएगा, अतः अभ्यर्थियों को कम से कम 90 मिनट पूर्व रिपोर्ट करने की सलाह दी जाती है।',
+      },
+    ],
+    publishedAt: '2026-09-17',
+    updatedAt: '2026-09-17',
+    isDemo: false,
+  },
+
+  // 4. MPESB Van Rakshak, Jail Prahari PET Schedule 2026
+  {
+    id: 'ac-mpesb-van-rakshak-jail-prahari-pet-schedule-2026',
+    slug: 'mpesb-van-rakshak-jail-prahari-pet-schedule-admit-card-2026',
+    examName: 'MPESB Van Rakshak, Jail Prahari PET Schedule 2026',
+    examNameHi: 'मध्य प्रदेश ईएसबी वनरक्षक, क्षेत्र रक्षक एवं जेल प्रहरी शारीरिक दक्षता परीक्षण (PET) शेड्यूल व एडमिट कार्ड 2026',
+    organization: 'Madhya Pradesh Employees Selection Board (MPESB), Bhopal',
+    postName: 'Van Rakshak (Forest Guard), Kshetra Rakshak & Jail Prahari',
+    totalVacancy: '1,679 Posts (वन विभाग एवं जेल विभाग)',
+    examDate: '07/10/2026 to 18/10/2026 (Physical Efficiency Test)',
+    status: 'Released',
+    releaseDate: '15/09/2026 (Schedule & Admit Card Notice Out)',
+    downloadUrl: 'https://esb.mp.gov.in',
+    officialNotificationUrl: 'https://esb.mp.gov.in',
+    instructions: [
+      'लिखित परीक्षा में सफल अभ्यर्थी शारीरिक प्रवीणता परीक्षण (PET) हेतु अपना शेड्यूल एवं ई-एडमिट कार्ड बोर्ड की वेबसाइट से डाउनलोड कर सकते हैं।',
+      'परीक्षण स्थल: अंतरराष्ट्रीय खेल परिसर, शूटिंग अकादमी के सामने, नाथू बरखेड़ा रोड, नीलबड़, भोपाल (म.प्र.)।',
+      'वनरक्षक पद हेतु शारीरिक मापदंड एवं पैदल चाल: पुरुष अभ्यर्थियों को 4 घंटे में 25 किमी एवं महिला अभ्यर्थियों को 4 घंटे में 14 किमी की पैदल चाल पूर्ण करनी होगी।',
+      'जेल प्रहरी हेतु: पुरुष 800 मीटर दौड़ (2 मिनट 50 सेकंड), गोला फेंक (7.260 किग्रा - 20 फीट); महिला 800 मीटर दौड़ (4 मिनट), गोला फेंक (4 किग्रा - 16 फीट)।',
+      'सभी मूल शैक्षणिक प्रमाण पत्र, जाति प्रमाण पत्र, निवास प्रमाण पत्र, रोजगार पंजीयन एवं 2 सेट स्वप्रमाणित छायाप्रतियां साथ लाएं।',
+    ],
+    stepsToDownload: [
+      'मध्य प्रदेश कर्मचारी चयन मंडल की आधिकारिक वेबसाइट esb.mp.gov.in पर जाएं।',
+      'होमपेज पर "नवीनतम सूचनाएं / Latest Updates" अनुभाग में "Physical Proficiency Test (PET) Schedule & Admit Card - Van Rakshak & Jail Prahari Combined Recruitment 2026" लिंक पर क्लिक करें।',
+      'अपना 13 अंकों का आवेदन क्रमांक (Application No) अथवा 8 अंकों का रोल नंबर (Roll No) दर्ज करें।',
+      'अपनी जन्मतिथि (DD/MM/YYYY) एवं मां के नाम के पहले 2 अक्षर + आधार के अंतिम 4 अंक का कैप्चा दर्ज करें।',
+      '"Search / Submit" बटन पर क्लिक करें और अपना पीईटी कॉल लेटर डाउनलोड करें।',
+    ],
+    faqs: [
+      {
+        question: 'एमपी वनरक्षक एवं जेल प्रहरी पीईटी कब से शुरू होगा?',
+        answer: 'शारीरिक दक्षता परीक्षण (PET) 07 अक्टूबर 2026 से 18 अक्टूबर 2026 के मध्य नीलबड़ भोपाल स्थित खेल परिसर में आयोजित होगा।',
+      },
+      {
+        question: 'वनरक्षक पद के लिए पैदल चाल के क्या मानक हैं?',
+        answer: 'पुरुष उम्मीदवारों के लिए 4 घंटे में 25 किलोमीटर तथा महिला उम्मीदवारों के लिए 4 घंटे में 14 किलोमीटर की दूरी पैदल तय करना अनिवार्य है।',
+      },
+      {
+        question: 'क्या बायोमेट्रिक सत्यापन किया जाएगा?',
+        answer: 'हाँ, फिजिकल ग्राउंड में प्रवेश से पूर्व आधार आधारित बायोमेट्रिक सत्यापन अनिवार्य रूप से किया जाएगा।',
+      },
+    ],
+    publishedAt: '2026-09-17',
+    updatedAt: '2026-09-17',
+    isDemo: false,
+  },
+
+  // 5. UPSSSC Junior Assistant Typing Test Exam Date 2026
+  {
+    id: 'ac-upsssc-junior-assistant-typing-test-exam-date-2026',
+    slug: 'upsssc-junior-assistant-typing-test-exam-date-admit-card-2026',
+    examName: 'UPSSSC Junior Assistant Typing Test Exam Date 2026',
+    examNameHi: 'उत्तर प्रदेश अधीनस्थ सेवा चयन आयोग (UPSSSC) कनिष्ठ सहायक टंकण परीक्षा तिथि 2026 घोषित',
+    organization: 'Uttar Pradesh Subordinate Services Selection Commission (UPSSSC), Lucknow',
+    postName: 'Junior Assistant, Junior Clerk & Assistant Grade-III (Advt No. 08-Exam/2022 & 2023)',
+    totalVacancy: '3,284 Posts (46,282 Candidates Qualified for Typing Test)',
+    examDate: '30/10/2026 से प्रारंभ (Lucknow Centers)',
+    status: 'Released',
+    releaseDate: '16/09/2026 (Official Notice Released)',
+    downloadUrl: 'https://upsssc.gov.in',
+    officialNotificationUrl: 'https://upsssc.gov.in',
+    instructions: [
+      'यूपीएसएसएससी मुख्य परीक्षा परिणाम में सफल कुल 46,282 अभ्यर्थियों की कंप्यूटर टंकण (Typing Test) परीक्षा 30 अक्टूबर 2026 से लखनऊ स्थित परीक्षा केंद्रों पर आयोजित की जाएगी।',
+      'टंकण परीक्षा गति मानक: हिंदी में न्यूनतम 25 शब्द प्रति मिनट (मङ्गल / कृतिदेव फॉन्ट) तथा अंग्रेजी में न्यूनतम 30 शब्द प्रति मिनट की गति अनिवार्य है।',
+      'यह परीक्षा केवल अर्हक प्रकृति (Qualifying Nature) की है, इसके अंक अंतिम मेरिट में नहीं जुड़ेंगे परंतु इसे उत्तीर्ण करना अनिवार्य है।',
+      'एडमिट कार्ड परीक्षा प्रारंभ होने के 1 सप्ताह पूर्व आधिकारिक वेबसाइट upsssc.gov.in पर डाउनलोड हेतु उपलब्ध कराए जाएंगे।',
+    ],
+    stepsToDownload: [
+      'यूपीएसएसएससी की आधिकारिक वेबसाइट upsssc.gov.in पर जाएं।',
+      '"Important Notice regarding Junior Assistant Typing Test Examination Schedule" अथवा "Download Admit Card for Typing Test" लिंक पर क्लिक करें।',
+      'अपना रजिस्ट्रेशन नंबर (Candidate Registration No), जन्मतिथि (DOB), लिंग (Gender) का चयन करें।',
+      'स्क्रीन पर प्रदर्शित सत्यापन कोड (Verification Code) दर्ज करें।',
+      '"Download Admit Card" बटन पर क्लिक करके अपना प्रवेश पत्र डाउनलोड करें एवं उस पर दिए गए बैच और रिपोर्टिंग समय की जांच करें।',
+    ],
+    faqs: [
+      {
+        question: 'यूपीएसएसएससी कनिष्ठ सहायक टाइपिंग टेस्ट कब से शुरू हो रहा है?',
+        answer: 'आधिकारिक नोटिस के अनुसार टाइपिंग टेस्ट 30 अक्टूबर 2026 से लखनऊ के विभिन्न कंप्यूटर केंद्रों पर प्रारंभ होगा।',
+      },
+      {
+        question: 'हिंदी टाइपिंग के लिए कौन सा फॉन्ट उपयोग किया जाएगा?',
+        answer: 'हिंदी टाइपिंग परीक्षा इनस्क्रिप्ट (Mangal) अथवा Kruti Dev 010 कीबोर्ड लेआउट पर आयोजित की जाएगी। न्यूनतम गति 25 शब्द/मिनट आवश्यक है।',
+      },
+      {
+        question: 'क्या दोनों भाषाओं (हिंदी व अंग्रेजी) में टाइपिंग पास करना अनिवार्य है?',
+        answer: 'हाँ, उत्तर प्रदेश कनिष्ठ सहायक सेवा नियमावली के अनुसार अभ्यर्थी को हिंदी (25 शब्द/मिनट) एवं अंग्रेजी (30 शब्द/मिनट) दोनों में अर्हता प्राप्त करना अनिवार्य है।',
+      },
+    ],
+    publishedAt: '2026-09-17',
+    updatedAt: '2026-09-17',
+    isDemo: false,
+  },
   // 1. Railway RRB Section Controller Exam Date 2026
   {
     id: 'ac-rrb-section-controller-exam-date-2026',

@@ -19,8 +19,113 @@ import { REAL_LATEST_RESULTS } from './realLatestResults';
 import { REAL_LATEST_SCHEMES } from './realLatestSchemes';
 import { REAL_PREVIOUS_PAPERS } from './realPreviousPapers';
 import { REAL_LATEST_SCHOLARSHIPS } from './realLatestScholarships';
+import { ALL_OFFICIAL_SYLLABUSES } from './syllabusesData';
 
 export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
+  {
+    id: 'ann-ssc-cgl-tier1-city-admit-card-2026',
+    text: 'SSC CGL Tier 1 Exam City Slip & Application Status 2026 Released: Check Exam Date & City at ssc.gov.in',
+    textHi: 'एसएससी सीजीएल टियर-1 परीक्षा शहर (Exam City) एवं स्टेटस जारी: ssc.gov.in से अपनी परीक्षा तिथि व शहर चेक करें',
+    linkUrl: '/admit-card/ssc-cgl-tier-1-exam-city-intimation-admit-card-2026',
+    isLive: true,
+    type: 'ADMIT_CARD',
+  },
+  {
+    id: 'ann-rrb-ntpc-recruitment-2026',
+    text: 'Railway RRB NTPC 2026 Recruitment Out: 5,165 Vacancies (1,688 10+2 UG & 3,477 Graduate) CEN 06/2026 & 07/2026',
+    textHi: 'रेलवे आरआरबी एनटीपीसी 2026 भर्ती जारी: 5,165 पदों (10+2 एवं स्नातक) हेतु विज्ञापन जारी, आवेदन शीघ्र शुरू',
+    linkUrl: '/jobs/rrb-ntpc-graduate-level-recruitment-online-form-2026',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-navy-ssr-mr-stage2-2026',
+    text: 'Indian Navy Agniveer SSR / MR INET Stage II Admit Card 2026 Released: Download Call Letter Now',
+    textHi: 'भारतीय नौसेना अग्निवीर SSR/MR स्टेज-II एडमिट कार्ड 2026 जारी: कॉल लेटर व सेंटर डिटेल्स डाउनलोड करें',
+    linkUrl: '/admit-card/indian-navy-ssr-mr-inet-stage-2-admit-card-2026',
+    isLive: true,
+    type: 'ADMIT_CARD',
+  },
+  {
+    id: 'ann-sbi-clerk-new-exam-date-2026',
+    text: 'SBI Junior Associates (Clerk) New Exam Date 2026: Prelims CBT on 26 & 27 September 2026',
+    textHi: 'एसबीआई जूनियर एसोसिएट्स (क्लर्क) नई परीक्षा तिथि 2026: प्रीलिम्स परीक्षा 26-27 सितंबर को आयोजित',
+    linkUrl: '/admit-card/sbi-junior-associates-clerk-new-exam-date-admit-card-2026',
+    isLive: true,
+    type: 'ADMIT_CARD',
+  },
+  {
+    id: 'ann-rpsc-si-2021-reexam-2026',
+    text: 'RPSC Rajasthan Police Sub Inspector 2021 Re-Exam Admit Card 2026 Released on SSO Portal',
+    textHi: 'आरपीएससी राजस्थान पुलिस एसआई 2021 पुन: परीक्षा एडमिट कार्ड जारी: एसएसओ पोर्टल से डाउनलोड करें',
+    linkUrl: '/admit-card/rpsc-rajasthan-police-sub-inspector-2021-re-exam-admit-card-2026',
+    isLive: true,
+    type: 'ADMIT_CARD',
+  },
+  {
+    id: 'ann-mpesb-subedar-steno-asi-2026',
+    text: 'MPESB MP Police Subedar (Steno) & ASI (Ministerial) Recruitment 2026: 507 Posts Online Form Open from 24/09/2026',
+    textHi: 'एमपी पुलिस सूबेदार (स्टेनो) एवं एएसआई (अनुसचिवीय) भर्ती 2026: 507 पदों पर 12वीं + CPCT पास ऑनलाइन आवेदन 24 सितंबर से',
+    linkUrl: '/jobs/mpesb-subedar-steno-asi-ministerial-recruitment-online-form',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-nvs-class-9th-2026',
+    text: 'NVS Class 9th Lateral Entry Admission 2026-27: JNVST Online Form Open till 30/09/2026 (No Fee)',
+    textHi: 'नवोदय विद्यालय कक्षा 9वीं प्रवेश परीक्षा (JNVST 2026-27): ऑनलाइन आवेदन फॉर्म शुरू, अंतिम तिथि 30/09/2026 (निःशुल्क)',
+    linkUrl: '/jobs/nvs-class-9th-admission-selection-test-online-form',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-mpesb-mp-police-2026',
+    text: 'MPESB MP Police Constable GD Recruitment 2026: 7,500 Posts 10th Pass Online Form Open from 22/09/2026',
+    textHi: 'एमपी पुलिस आरक्षक (GD) भर्ती 2026: 7,500 पदों पर 10वीं पास ऑनलाइन आवेदन 22 सितंबर से शुरू, अंतिम तिथि 06/10/2026',
+    linkUrl: '/jobs/mpesb-mp-police-constable-gd-recruitment-online-form',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-upessc-assistant-prof-2026',
+    text: 'UPESSC UP Assistant Professor Online Form 2026: 1,936 Posts (Advt 04/2026) Open till 07/10/2026',
+    textHi: 'यूपी उच्च शिक्षा सहायक आचार्य भर्ती 2026 (Advt 04/2026): 1,936 पदों पर ऑनलाइन आवेदन जारी, अंतिम तिथि 07/10/2026',
+    linkUrl: '/jobs/upessc-up-assistant-professor-recruitment-online-form',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-upessc-primary-teacher-2026',
+    text: 'UPESSC UP Primary Teacher (PRT) Online Form 2026: 12,405 Posts (Advt 05/2026) Open till 15/10/2026',
+    textHi: 'यूपी प्राथमिक शिक्षक (PRT) भर्ती 2026 (Advt 05/2026): 12,405 सहायक अध्यापक पदों पर ऑनलाइन आवेदन शुरू, अंतिम तिथि 15/10/2026',
+    linkUrl: '/jobs/upessc-up-primary-teacher-prt-recruitment-online-form',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-upessc-pgt-teacher-2026',
+    text: 'UPESSC UP PGT Teacher (Lecturer) Online Form 2026: 2,607 Posts (Advt 06/2026) Open till 17/10/2026',
+    textHi: 'यूपी पीजीटी (प्रवक्ता) शिक्षक भर्ती 2026 (Advt 06/2026): 2,607 पदों पर ऑनलाइन आवेदन शुरू, अंतिम तिथि 17/10/2026',
+    linkUrl: '/jobs/upessc-up-pgt-teacher-recruitment-online-form',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-upsc-ese-ies-2026',
+    text: 'UPSC Engineering Services Exam (ESE / IES) 2026: 474 Posts (Civil, Mech, Electrical, E&T) Online Form Open till 08/10/2026',
+    textHi: 'यूपीएससी इंजीनियरिंग सेवा परीक्षा (IES / ESE) 2026: सिविल, मैकेनिकल, इलेक्ट्रिकल 474 पदों पर ऑनलाइन आवेदन शुरू, अंतिम तिथि 08/10/2026',
+    linkUrl: '/jobs/upsc-engineering-services-examination-ese-ies-online-form',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-india-post-gds-2026',
+    text: 'India Post GDS Recruitment 2026: 44,228 Posts Online Form Open - No Exam Direct 10th Merit List Selection',
+    textHi: 'इंडिया पोस्ट ग्रामीण डाक सेवक (GDS) 44,228 पदों पर ऑनलाइन आवेदन जारी - बिना परीक्षा 10वीं मेरिट चयन, अंतिम तिथि 19/09/2026',
+    linkUrl: '/jobs/india-post-gds-recruitment-online-form',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
   {
     id: 'ann-rrb-paramedical-2026',
     text: 'Railway RRB Paramedical Staff CEN 05/2026: 590 Posts Online Form Open till 14/10/2026',
@@ -144,126 +249,7 @@ export const INITIAL_SCHOLARSHIPS: Scholarship[] = REAL_LATEST_SCHOLARSHIPS;
 
 export const INITIAL_ADMISSIONS: AdmissionUpdate[] = REAL_LATEST_ADMISSIONS;
 
-export const INITIAL_SYLLABUS: Syllabus[] = [
-  {
-    id: 'syl-1',
-    slug: 'ssc-cgl-exam-syllabus',
-    examName: 'SSC CGL Tier 1 & Tier 2 Detailed Syllabus & Exam Pattern 2026',
-    examNameHi: 'एसएससी सीजीएल टियर-1 एवं टियर-2 विस्तृत पाठ्यक्रम एवं परीक्षा पैटर्न',
-    organization: 'Staff Selection Commission',
-    overview: 'Complete section-wise syllabus for SSC Combined Graduate Level Examination covering General Intelligence & Reasoning, General Awareness, Quantitative Aptitude, English Comprehension, Mathematical Abilities and Computer Knowledge.',
-    examPattern: [
-      { stage: 'Tier 1 (Objective MCQ)', mode: 'Online CBT', totalMarks: '200 Marks (100 Questions)', totalTime: '60 Minutes', negativeMarking: '0.50 Mark per wrong answer' },
-      { stage: 'Tier 2 Paper 1 (Compulsory for all posts)', mode: 'Online CBT', totalMarks: '390 Marks + Qualifying Computer (60 Marks)', totalTime: '2 Hours 15 Minutes', negativeMarking: '1 Mark per wrong answer' },
-      { stage: 'Tier 2 Paper 2 (Only for JSO)', mode: 'Online CBT', totalMarks: '200 Marks (Statistics)', totalTime: '2 Hours', negativeMarking: '0.50 Mark' },
-    ],
-    subjects: [
-      {
-        subjectName: 'General Intelligence & Reasoning (सामान्य बुद्धिमत्ता एवं तर्कशक्ति)',
-        topics: [
-          'Analogies (समानता/सादृश्यता)',
-          'Classification (वर्गीकरण)',
-          'Series (श्रृंखला - संख्या व वर्णमाला)',
-          'Coding-Decoding (कूटलेखन)',
-          'Blood Relations (रक्त संबंध)',
-          'Direction Sense Test (दिशा ज्ञान परीक्षण)',
-          'Syllogism (कथन एवं निष्कर्ष)',
-          'Non-Verbal Reasoning (मिरर इमेज, पेपर कटिंग, सन्निहित चित्र)',
-        ],
-      },
-      {
-        subjectName: 'General Awareness (सामान्य ज्ञान एवं समसामयिकी)',
-        topics: [
-          'भारतीय इतिहास एवं राष्ट्रीय स्वतंत्रता आंदोलन',
-          'भारतीय संविधान, राजव्यवस्था एवं मौलिक अधिकार',
-          'भारत एवं विश्व का भूगोल',
-          'भारतीय अर्थव्यवस्था एवं बजट',
-          'सामान्य विज्ञान (भौतिकी, रसायन, जीव विज्ञान)',
-          'पर्यावरण एवं पारिस्थितिकी',
-          'राष्ट्रीय एवं अंतर्राष्ट्रीय करेंट अफेयर्स (विगत 6-8 माह)',
-          'खेलकूद, पुरस्कार, महत्वपूर्ण दिवस एवं पुस्तकें',
-        ],
-      },
-      {
-        subjectName: 'Quantitative Aptitude (संख्यात्मक अभियोग्यता - गणित)',
-        topics: [
-          'Number System (संख्या पद्धति)',
-          'Percentage (प्रतिशतता)',
-          'Profit and Loss, Discount (लाभ-हानि व बट्टा)',
-          'Simple & Compound Interest (साधारण व चक्रवृद्धि ब्याज)',
-          'Ratio and Proportion (अनुपात एवं समानुपात)',
-          'Time and Work, Pipes (समय और कार्य)',
-          'Time, Speed and Distance (समय, चाल और दूरी)',
-          'Algebra (बीजगणित)',
-          'Geometry (ज्यामिति - त्रिभुज, वृत्त, चतुर्भुज)',
-          'Mensuration (क्षेत्रमिति 2D व 3D)',
-          'Trigonometry (त्रिकोणमिति एवं ऊंचाई-दूरी)',
-          'Data Interpretation (तालिका एवं ग्राफ)',
-        ],
-      },
-      {
-        subjectName: 'English Comprehension',
-        topics: [
-          'Reading Comprehension Passages',
-          'Spot the Error & Sentence Improvement',
-          'Fill in the Blanks',
-          'Synonyms, Antonyms and Homonyms',
-          'Idioms and Phrases',
-          'One Word Substitution',
-          'Active and Passive Voice of Verbs',
-          'Direct and Indirect Speech (Narration)',
-          'Cloze Test',
-        ],
-      },
-    ],
-    selectionProcess: [
-      'Tier 1 Computer Based Examination (Qualifying for Tier 2)',
-      'Tier 2 Computer Based Examination (Merit Based)',
-      'Data Entry Speed Test (DEST) - 2000 key depressions in 15 mins',
-      'Document Verification and Medical Fitness',
-    ],
-    pdfDownloadUrl: 'https://ssc.gov.in',
-    publishedAt: '2026-08-12',
-    updatedAt: '2026-09-04',
-    isDemo: true,
-  },
-  {
-    id: 'syl-2',
-    slug: 'rrb-ntpc-syllabus',
-    examName: 'RRB NTPC Stage 1 & 2 Syllabus & Topic Wise Weightage 2026',
-    examNameHi: 'आरआरबी एनटीपीसी प्रथम एवं द्वितीय चरण विस्तृत सिलेबस',
-    organization: 'Railway Recruitment Boards',
-    overview: 'Detailed syllabus for RRB Non-Technical Popular Categories (NTPC) examination for 10+2 and Graduate level posts.',
-    examPattern: [
-      { stage: 'CBT 1 (Screening Test)', mode: 'Online Computer Test', totalMarks: '100 Marks (100 Questions)', totalTime: '90 Minutes (120 Mins for PwD)', negativeMarking: '1/3rd Mark per wrong response' },
-      { stage: 'CBT 2 (Merit Test)', mode: 'Online Computer Test', totalMarks: '120 Marks (120 Questions)', totalTime: '90 Minutes', negativeMarking: '1/3rd Mark per wrong response' },
-    ],
-    subjects: [
-      {
-        subjectName: 'Mathematics (30 Marks in CBT-1, 35 Marks in CBT-2)',
-        topics: ['Number System', 'Decimals & Fractions', 'LCM & HCF', 'Ratio & Proportion', 'Percentages', 'Mensuration', 'Time & Work', 'Time & Distance', 'Simple & Compound Interest', 'Profit & Loss', 'Elementary Algebra', 'Geometry & Trigonometry', 'Elementary Statistics'],
-      },
-      {
-        subjectName: 'General Intelligence & Reasoning (30 Marks in CBT-1, 35 Marks in CBT-2)',
-        topics: ['Analogies', 'Alphabetical & Number Series', 'Coding & Decoding', 'Mathematical Operations', 'Relationships', 'Syllogism', 'Jumbling', 'Venn Diagrams', 'Data Interpretation & Sufficiency', 'Conclusions & Decision Making', 'Analytical Reasoning'],
-      },
-      {
-        subjectName: 'General Awareness (40 Marks in CBT-1, 50 Marks in CBT-2)',
-        topics: ['Current Events of National and International Importance', 'Games and Sports', 'Art and Culture of India', 'Indian Literature', 'Monuments and Places of India', 'General Science & Life Sciences (up to 10th CBSE)', 'History of India and Freedom Struggle', 'Physical, Social & Economic Geography of India and World', 'Indian Polity & Governance', 'General Scientific & Technological Developments including Space and Nuclear Program of India', 'UN & Other Important World Organizations', 'Environmental Issues', 'Basics of Computers & Computer Applications'],
-      },
-    ],
-    selectionProcess: [
-      '1st Stage Computer Based Test (CBT-1)',
-      '2nd Stage Computer Based Test (CBT-2)',
-      'Typing Skill Test / Computer Based Aptitude Test (as per post)',
-      'Document Verification & Medical Exam',
-    ],
-    pdfDownloadUrl: 'https://indianrailways.gov.in',
-    publishedAt: '2026-08-16',
-    updatedAt: '2026-09-02',
-    isDemo: true,
-  },
-];
+export const INITIAL_SYLLABUS: Syllabus[] = ALL_OFFICIAL_SYLLABUSES;
 
 export const INITIAL_PREVIOUS_PAPERS: PreviousPaper[] = REAL_PREVIOUS_PAPERS;
 
