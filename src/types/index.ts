@@ -237,6 +237,7 @@ export interface Scholarship {
 export interface AdmissionUpdate {
   id: string;
   slug: string;
+  advtNo?: string;
   courseOrExam: string;
   courseOrExamHi?: string;
   institution: string;
@@ -249,10 +250,14 @@ export interface AdmissionUpdate {
   totalSeats?: string;
   examDate?: string;
   ageLimit?: string;
-  feeDetails?: { generalOBC: string; scSt: string };
+  feeDetails?: { generalOBC: string; scSt: string; paymentMode?: string };
   description?: string;
+  courseWiseEligibility?: { courseName: string; seatsOrInfo: string; eligibility: string }[];
+  examPattern?: string[];
+  requiredDocuments?: string[];
   importantDates?: { event: string; date: string }[];
   stepsToApply?: string[];
+  importantLinks?: { label: string; url: string; note?: string }[];
   faqs?: FAQItem[];
   publishedAt: string;
   updatedAt: string;

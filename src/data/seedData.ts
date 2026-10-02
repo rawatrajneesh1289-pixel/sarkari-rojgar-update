@@ -23,6 +23,22 @@ import { ALL_OFFICIAL_SYLLABUSES } from './syllabusesData';
 
 export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
   {
+    id: 'ann-mpesb-sub-engineer-reopen-2026',
+    text: 'MPESB Group 3 Sub Engineer Re-Open Online Form 2026 (1,700 Posts) – Apply Online from 13 Oct to 27 Oct 2026',
+    textHi: 'एमपीईएसबी ग्रुप-3 सब इंजीनियर भर्ती 2026 री-ओपन फॉर्म (कुल पद बढ़कर 1,700 हुए) – 13 से 27 अक्टूबर तक करें ऑनलाइन आवेदन',
+    linkUrl: '/jobs/mpesb-group-3-sub-engineer-recruitment-2026',
+    isLive: true,
+    type: 'NEW_JOB',
+  },
+  {
+    id: 'ann-rrb-alp-cbt2-results-2026',
+    text: 'RRB ALP CBT-II Result, RRB JE CBT-2, NEET PG, UPSSSC Lekhpal Mains & 65+ Latest Results 2026 Declared',
+    textHi: 'रेलवे आरआरबी एएलपी (ALP CBT-II), जेई सीबीटी-2, नीट पीजी एवं यूपी लेखपाल मुख्य परीक्षा सहित 65+ नए रिजल्ट जारी',
+    linkUrl: '/results/rrb-alp-cbt-ii-result-2026-out',
+    isLive: true,
+    type: 'RESULT',
+  },
+  {
     id: 'ann-ssc-cgl-tier1-city-admit-card-2026',
     text: 'SSC CGL Tier 1 Exam City Slip & Application Status 2026 Released: Check Exam Date & City at ssc.gov.in',
     textHi: 'एसएससी सीजीएल टियर-1 परीक्षा शहर (Exam City) एवं स्टेटस जारी: ssc.gov.in से अपनी परीक्षा तिथि व शहर चेक करें',
@@ -72,9 +88,9 @@ export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
   },
   {
     id: 'ann-nvs-class-9th-2026',
-    text: 'NVS Class 9th Lateral Entry Admission 2026-27: JNVST Online Form Open till 30/09/2026 (No Fee)',
-    textHi: 'नवोदय विद्यालय कक्षा 9वीं प्रवेश परीक्षा (JNVST 2026-27): ऑनलाइन आवेदन फॉर्म शुरू, अंतिम तिथि 30/09/2026 (निःशुल्क)',
-    linkUrl: '/jobs/nvs-class-9th-admission-selection-test-online-form',
+    text: 'Admissions 2026-27 Active: Bihar BLET 2026, NVS Class 9th & 11th (Date Extended), IIT GATE 2027, AIBE 22, CLAT & IIT JAM 2027',
+    textHi: 'प्रवेश फॉर्म 2026-27 सक्रिय: बिहार BLET, नवोदय 9वीं व 11वीं (तिथि बढ़ी - 15 अक्टूबर), IIT GATE 2027, AIBE-22, CLAT व IIT JAM 2027',
+    linkUrl: '/admission',
     isLive: true,
     type: 'NEW_JOB',
   },

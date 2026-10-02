@@ -95,7 +95,7 @@ export const JobsListPage: React.FC = () => {
       <SeoHead
         title="लेटेस्ट सरकारी नौकरी 2026 | Latest Government Jobs Notification Online Form"
         description="केन्द्र एवं राज्य सरकारों द्वारा जारी सभी लेटेस्ट सरकारी नौकरियों की सूची। 10वीं, 12वीं, ग्रेजुएट पास अभ्यर्थियों के लिए SSC, Railway, UPSC, Bank, Police भर्ती ऑनलाइन फॉर्म।"
-        canonicalUrl="https://sarkarirozgarupdate.com/jobs"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/jobs"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

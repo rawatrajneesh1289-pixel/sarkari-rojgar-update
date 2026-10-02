@@ -38,27 +38,73 @@ export const ResultsListPage: React.FC = () => {
     },
     {
       key: 'STATE',
-      label: 'राज्य / बोर्ड (State / BTSC / SCVTUP)',
-      count: allResults.filter((r) =>
-        r.organization.toLowerCase().includes('btsc') ||
-        r.organization.toLowerCase().includes('scvtup') ||
-        r.organization.toLowerCase().includes('jammu') ||
-        r.organization.toLowerCase().includes('bihar') ||
-        r.organization.toLowerCase().includes('uttar pradesh')
-      ).length,
+      label: 'राज्य आयोग / बोर्ड (UP / Bihar / Raj / MP / Haryana / Delhi)',
+      count: allResults.filter((r) => {
+        const org = (r.organization + ' ' + r.examName).toLowerCase();
+        return (
+          org.includes('upsssc') ||
+          org.includes('uppsc') ||
+          org.includes('upessc') ||
+          org.includes('uttar pradesh') ||
+          org.includes('scvtup') ||
+          org.includes('updeled') ||
+          org.includes('up tgt') ||
+          org.includes('dgmhup') ||
+          org.includes('rpsc') ||
+          org.includes('rssb') ||
+          org.includes('rajasthan') ||
+          org.includes('bpsc') ||
+          org.includes('bpssc') ||
+          org.includes('csbc') ||
+          org.includes('btsc') ||
+          org.includes('beltron') ||
+          org.includes('bihar') ||
+          org.includes('patna') ||
+          org.includes('bcece') ||
+          org.includes('mpesb') ||
+          org.includes('madhya pradesh') ||
+          org.includes('cgpsc') ||
+          org.includes('chhattisgarh') ||
+          org.includes('hpsc') ||
+          org.includes('bseh') ||
+          org.includes('hbse') ||
+          org.includes('htet') ||
+          org.includes('haryana') ||
+          org.includes('dsssb') ||
+          org.includes('delhi') ||
+          org.includes('jammu') ||
+          org.includes('cbse')
+        );
+      }).length,
     },
     {
       key: 'BANKING_OTHER',
-      label: 'बैंकिंग व अन्य (RBI / EMRS / NCERT)',
-      count: allResults.filter((r) =>
-        r.organization.toLowerCase().includes('rbi') ||
-        r.organization.toLowerCase().includes('emrs') ||
-        r.organization.toLowerCase().includes('ncert')
-      ).length,
+      label: 'बैंकिंग, मेडिकल व अन्य (RBI / SBI / IBPS / AIIMS / Defence)',
+      count: allResults.filter((r) => {
+        const org = (r.organization + ' ' + r.examName).toLowerCase();
+        return (
+          org.includes('rbi') ||
+          org.includes('sbi') ||
+          org.includes('ibps') ||
+          org.includes('iob') ||
+          org.includes('idbi') ||
+          org.includes('oicl') ||
+          org.includes('aiims') ||
+          org.includes('neet') ||
+          org.includes('nbems') ||
+          org.includes('mcc') ||
+          org.includes('afcat') ||
+          org.includes('air force') ||
+          org.includes('intelligence bureau') ||
+          org.includes('emrs') ||
+          org.includes('ncert')
+        );
+      }).length,
     },
   ];
 
   const filtered = allResults.filter((r) => {
+    const org = (r.organization + ' ' + r.examName).toLowerCase();
     // Category match
     if (activeCategory === 'RAILWAY') {
       const match = r.organization.toLowerCase().includes('railway') || r.examName.toLowerCase().includes('rrb');
@@ -74,17 +120,56 @@ export const ResultsListPage: React.FC = () => {
       if (!match) return false;
     } else if (activeCategory === 'STATE') {
       const match =
-        r.organization.toLowerCase().includes('btsc') ||
-        r.organization.toLowerCase().includes('scvtup') ||
-        r.organization.toLowerCase().includes('jammu') ||
-        r.organization.toLowerCase().includes('bihar') ||
-        r.organization.toLowerCase().includes('uttar pradesh');
+        org.includes('upsssc') ||
+        org.includes('uppsc') ||
+        org.includes('upessc') ||
+        org.includes('uttar pradesh') ||
+        org.includes('scvtup') ||
+        org.includes('updeled') ||
+        org.includes('up tgt') ||
+        org.includes('dgmhup') ||
+        org.includes('rpsc') ||
+        org.includes('rssb') ||
+        org.includes('rajasthan') ||
+        org.includes('bpsc') ||
+        org.includes('bpssc') ||
+        org.includes('csbc') ||
+        org.includes('btsc') ||
+        org.includes('beltron') ||
+        org.includes('bihar') ||
+        org.includes('patna') ||
+        org.includes('bcece') ||
+        org.includes('mpesb') ||
+        org.includes('madhya pradesh') ||
+        org.includes('cgpsc') ||
+        org.includes('chhattisgarh') ||
+        org.includes('hpsc') ||
+        org.includes('bseh') ||
+        org.includes('hbse') ||
+        org.includes('htet') ||
+        org.includes('haryana') ||
+        org.includes('dsssb') ||
+        org.includes('delhi') ||
+        org.includes('jammu') ||
+        org.includes('cbse');
       if (!match) return false;
     } else if (activeCategory === 'BANKING_OTHER') {
       const match =
-        r.organization.toLowerCase().includes('rbi') ||
-        r.organization.toLowerCase().includes('emrs') ||
-        r.organization.toLowerCase().includes('ncert');
+        org.includes('rbi') ||
+        org.includes('sbi') ||
+        org.includes('ibps') ||
+        org.includes('iob') ||
+        org.includes('idbi') ||
+        org.includes('oicl') ||
+        org.includes('aiims') ||
+        org.includes('neet') ||
+        org.includes('nbems') ||
+        org.includes('mcc') ||
+        org.includes('afcat') ||
+        org.includes('air force') ||
+        org.includes('intelligence bureau') ||
+        org.includes('emrs') ||
+        org.includes('ncert');
       if (!match) return false;
     }
 
@@ -104,7 +189,7 @@ export const ResultsListPage: React.FC = () => {
       <SeoHead
         title="सरकारी रिजल्ट 2026 | Sarkari Result, Cut Off Marks, Merit List"
         description="सभी सरकारी प्रतियोगी परीक्षाओं के रिजल्ट, मेरिट लिस्ट और कट-ऑफ मार्क्स की जांच करें। RRB Group D, EMRS, UPSC CMS, NCERT, Jammu Univ, NTA ICAR, CSIR NET, BTSC, UP SCVTUP ITI, CAPF AC, SSC Steno, RBI Grade B।"
-        canonicalUrl="https://sarkarirozgarupdate.com/results"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/results"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

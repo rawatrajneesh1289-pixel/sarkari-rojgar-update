@@ -8,7 +8,7 @@ export const PrivacyPolicyPage: React.FC = () => {
       <SeoHead
         title="Privacy Policy (गोपनीयता नीति) | Sarkari Rozgar Update"
         description="Sarkari Rozgar Update की गोपनीयता नीति। जानिए हम आपके डेटा और कुकीज की सुरक्षा कैसे करते हैं।"
-        canonicalUrl="https://sarkarirozgarupdate.com/privacy-policy"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/privacy-policy"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
@@ -20,13 +20,13 @@ export const PrivacyPolicyPage: React.FC = () => {
               Privacy Policy (गोपनीयता नीति)
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Effective Date: March 2026 | Domain: sarkarirozgarupdate.com
+              Effective Date: March 2026 | Domain: sarkari-rozgar-update.netlify.app
             </p>
           </div>
 
           <div className="prose prose-slate max-w-none text-sm sm:text-base text-slate-700 space-y-4 leading-relaxed">
             <p>
-              Sarkari Rozgar Update (SRU) पर हम अपने पाठकों और उपयोगकर्ताओं की गोपनीयता का पूर्ण आदर करते हैं। यह दस्तावेज यह स्पष्ट करता है कि जब आप sarkarirozgarupdate.com का उपयोग करते हैं, तो किस प्रकार की जानकारी एकत्रित की जाती है और उसका उपयोग कैसे किया जाता है।
+              Sarkari Rozgar Update (SRU) पर हम अपने पाठकों और उपयोगकर्ताओं की गोपनीयता का पूर्ण आदर करते हैं। यह दस्तावेज यह स्पष्ट करता है कि जब आप sarkari-rozgar-update.netlify.app का उपयोग करते हैं, तो किस प्रकार की जानकारी एकत्रित की जाती है और उसका उपयोग कैसे किया जाता है।
             </p>
 
             <h2 className="text-base font-bold text-slate-900">1. एकत्रित की जाने वाली जानकारी</h2>
@@ -61,7 +61,7 @@ export const TermsPage: React.FC = () => {
       <SeoHead
         title="Terms and Conditions (नियम व शर्तें) | Sarkari Rozgar Update"
         description="Sarkari Rozgar Update के उपयोग हेतु नियम व शर्तें।"
-        canonicalUrl="https://sarkarirozgarupdate.com/terms"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/terms"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">

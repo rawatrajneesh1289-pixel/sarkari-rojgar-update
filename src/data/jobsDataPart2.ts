@@ -140,35 +140,6 @@ export const JOBS_PART_2: Job[] = [
     officialWebsite: 'https://hppsc.hp.gov.in',
   }),
 
-  // 27. MPESB Group 3 Sub Engineer
-  buildJob({
-    id: 'job-mpesb-sub-engineer-2026',
-    slug: 'mpesb-group-3-sub-engineer-recruitment-2026',
-    title: 'MPESB Group 3 Sub Engineer and Other Post Online Form 2026',
-    titleHi: 'एमपीईएसबी ग्रुप-3 सब इंजीनियर एवं अन्य पद संयुक्त भर्ती 2026',
-    organization: 'Madhya Pradesh Employees Selection Board (MPESB Bhopal)',
-    organizationHi: 'मध्य प्रदेश कर्मचारी चयन मंडल (भोपाल)',
-    postName: 'Sub Engineer (Civil / Electrical / Mechanical), Draftsman & Surveyors',
-    totalVacancy: '648 Posts',
-    qualification: '3-Year Diploma in Civil / Electrical / Mechanical Engineering or B.E/B.Tech from recognized institution',
-    category: 'State Government',
-    state: 'Madhya Pradesh',
-    status: 'CLOSED',
-    shortDescription: 'MPESB Group 3 Combined Recruitment Test 2026 for Sub-Engineer and equivalent technical posts across various MP state departments.',
-    shortDescriptionHi: 'मध्य प्रदेश के विभिन्न विभागों में उपयंत्री के 648 पदों पर आवेदन प्रक्रिया समाप्त हो चुकी है।',
-    applicationStartDate: '28/08/2026',
-    applicationLastDate: '12/09/2026 (Closed)',
-    feeLastDate: '12/09/2026',
-    correctionLastDate: '17/09/2026',
-    examDate: '19/10/2026 Onwards',
-    feeGeneralObcEws: '₹ 500/- + Portal Fees',
-    feeScStPh: '₹ 250/- (For MP domicile candidates)',
-    minAge: '18 Years',
-    maxAge: '40 Years (Male) / 45 Years (Female & Reserved of MP)',
-    salaryScale: 'Pay Matrix Level-8 & 9 (₹ 32,800 - 1,03,600/-)',
-    officialWebsite: 'https://esb.mp.gov.in',
-  }),
-
   // 28. IIT BHU Non Teaching Various Post
   buildJob({
     id: 'job-iit-bhu-non-teaching-2026',

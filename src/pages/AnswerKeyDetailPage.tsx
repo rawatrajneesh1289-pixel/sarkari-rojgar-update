@@ -56,7 +56,7 @@ export const AnswerKeyDetailPage: React.FC<AnswerKeyDetailPageProps> = ({ slug }
     publisher: {
       '@type': 'Organization',
       name: 'Sarkari Rozgar Update',
-      url: 'https://sarkarirozgarupdate.com',
+      url: 'https://sarkari-rozgar-update.netlify.app',
     },
     datePublished: answerKey.publishedAt,
     dateModified: answerKey.updatedAt,
@@ -67,7 +67,7 @@ export const AnswerKeyDetailPage: React.FC<AnswerKeyDetailPageProps> = ({ slug }
       <SeoHead
         title={`${answerKey.examName} Answer Key 2026 - PDF Download & Objection Link`}
         description={`${answerKey.examNameHi || answerKey.examName}: परीक्षा तिथि ${answerKey.examDate}। उत्तर कुंजी जारी: ${answerKey.releaseDate}। आपत्ति की अंतिम तिथि: ${answerKey.objectionLastDate || 'शीघ्र'}। आधिकारिक पीडीएफ व सीधा डाउनलोड लिंक।`}
-        canonicalUrl={`https://sarkarirozgarupdate.com/answer-key/${answerKey.slug}`}
+        canonicalUrl={`https://sarkari-rozgar-update.netlify.app/answer-key/${answerKey.slug}`}
         schema={answerKeySchema}
       />
 

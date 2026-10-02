@@ -52,7 +52,7 @@ export const SchemeDetailPage: React.FC<SchemeDetailPageProps> = ({ slug }) => {
       <SeoHead
         title={`${scheme.schemeName} 2026 - Eligibility, Benefits & Apply Online`}
         description={`${scheme.schemeNameHi || scheme.schemeName}: उद्देश्य, पात्रता मानदंड, लाभ, आवश्यक दस्तावेज चेकलिस्ट एवं ऑनलाइन आवेदन प्रक्रिया।`}
-        canonicalUrl={`https://sarkarirozgarupdate.com/sarkari-yojana/${scheme.slug}`}
+        canonicalUrl={`https://sarkari-rozgar-update.netlify.app/sarkari-yojana/${scheme.slug}`}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

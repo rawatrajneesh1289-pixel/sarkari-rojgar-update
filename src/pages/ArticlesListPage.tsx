@@ -15,7 +15,7 @@ export const ArticlesListPage: React.FC = () => {
       <SeoHead
         title="परीक्षा तैयारी गाइड व महत्वपूर्ण लेख | Sarkari Exam Preparation Tips & Articles"
         description="सरकारी नौकरी और प्रतियोगी परीक्षाओं की तैयारी के लिए सर्वश्रेष्ठ रणनीति, आवश्यक दस्तावेज गाइड, आरक्षण एवं आयु सीमा नियम और विशेषज्ञ सुझाव।"
-        canonicalUrl="https://sarkarirozgarupdate.com/articles"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/articles"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

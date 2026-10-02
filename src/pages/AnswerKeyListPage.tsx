@@ -41,7 +41,7 @@ export const AnswerKeyListPage: React.FC = () => {
       <SeoHead
         title="उत्तर कुंजी 2026 | Sarkari Exam Answer Key & Online Objection Link"
         description="सभी सरकारी प्रतियोगी परीक्षाओं की ऑफिशियल आंसर की, क्वेश्चन पेपर एवं ऑनलाइन आपत्ति दर्ज करने के लिंक। NTA AIAPGET, CSIR UGC NET, UPSSSC Lower PCS, SSC JE Paper 2, HTET OMR Sheet, DSSSB July उत्तर कुंजी पीडीएफ डाउनलोड करें।"
-        canonicalUrl="https://sarkarirozgarupdate.com/answer-key"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/answer-key"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

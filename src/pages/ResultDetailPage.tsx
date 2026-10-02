@@ -50,7 +50,7 @@ export const ResultDetailPage: React.FC<ResultDetailPageProps> = ({ slug }) => {
       <SeoHead
         title={`${result.examName} Result 2026 - Cut Off Marks & Merit List`}
         description={`${result.examNameHi || result.examName}: घोषित तिथि ${result.resultDate}। कट-ऑफ मार्क्स, स्कोरकार्ड एवं चयन सूची डाउनलोड लिंक।`}
-        canonicalUrl={`https://sarkarirozgarupdate.com/results/${result.slug}`}
+        canonicalUrl={`https://sarkari-rozgar-update.netlify.app/results/${result.slug}`}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

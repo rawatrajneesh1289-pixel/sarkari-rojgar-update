@@ -10,7 +10,7 @@ export const AboutPage: React.FC = () => {
       <SeoHead
         title="About Us (हमारे बारे में) | Sarkari Rozgar Update"
         description="Sarkari Rozgar Update का परिचय, हमारा उद्देश्य, दृष्टि एवं अभ्यर्थियों के लिए निष्पक्ष एवं विश्वसनीय सूचना प्रदान करने का संकल्प।"
-        canonicalUrl="https://sarkarirozgarupdate.com/about"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/about"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
@@ -26,7 +26,7 @@ export const AboutPage: React.FC = () => {
               About Sarkari Rozgar Update (SRU)
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              sarkarirozgarupdate.com — स्वतंत्र, तीव्र एवं सरल रोजगार मार्गदर्शक
+              sarkari-rozgar-update.netlify.app — स्वतंत्र, तीव्र एवं सरल रोजगार मार्गदर्शक
             </p>
           </div>
 

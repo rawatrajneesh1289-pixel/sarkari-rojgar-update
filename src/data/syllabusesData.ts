@@ -1,6 +1,93 @@
 import { Syllabus } from '../types';
 
 export const ALL_OFFICIAL_SYLLABUSES: Syllabus[] = [
+  // 0. MPESB Group 3 Sub Engineer & Other Post Combined Recruitment Test 2026 Syllabus
+  {
+    id: 'syl-mpesb-group-3-sub-engineer-2026',
+    slug: 'mpesb-group-3-sub-engineer-syllabus',
+    examName: 'MPESB Group 3 Sub Engineer, Draftsman & Other Post Syllabus & Exam Pattern 2026 (200 Marks)',
+    examNameHi: 'एमपीईएसबी ग्रुप-3 सब इंजीनियर (उपयंत्री), मानचित्रकार एवं समकक्ष पद भर्ती परीक्षा 2026 विस्तृत पाठ्यक्रम एवं अंक विभाजन (200 अंक)',
+    organization: 'Madhya Pradesh Employees Selection Board (MPESB), Bhopal',
+    overview: 'Official syllabus and examination scheme for MPESB Group-3 Sub Engineer (Civil, Electrical, Mechanical, Electronics), Draftsman, Samaypal, and equivalent technical posts Combined Recruitment Test 2026 (1,700 Vacancies). Single-paper online CBT of 200 Marks (Part-A: 100 Marks General Non-Technical subjects across 7 sections + Part-B: 100 Marks Core Engineering/Technical discipline) with 3 Hours duration and No Negative Marking.',
+    examPattern: [
+      {
+        stage: 'Part-A: Non-Technical Common Section (सभी अभ्यर्थियों हेतु अनिवार्य)',
+        mode: 'Online Computer Based Test (MCQ)',
+        totalMarks: '100 Marks (GK, Hindi, English, Mathematics, Reasoning, General Science & Computer Knowledge)',
+        totalTime: 'Combined 3 Hours (180 Minutes) for Part-A + Part-B',
+        negativeMarking: 'No Negative Marking (कोई नकारात्मक अंकन नहीं)',
+      },
+      {
+        stage: 'Part-B: Concerned Engineering / Technical Subject (संबंधित तकनीकी विषय)',
+        mode: 'Online Computer Based Test (MCQ - Diploma / Degree Standard)',
+        totalMarks: '100 Marks (100 Questions from Civil / Electrical / Mechanical / Draftsman / Opted Trade)',
+        totalTime: 'Included in 3 Hours total exam duration',
+        negativeMarking: 'No Negative Marking (प्रत्येक सही उत्तर हेतु 1 अंक)',
+      },
+    ],
+    subjects: [
+      {
+        subjectName: 'Part-A (1): General Knowledge & MP GK / सामान्य ज्ञान एवं म.प्र. विशेष (~16 Marks)',
+        topics: [
+          'Madhya Pradesh General Knowledge: History, Geography, Rivers, Irrigation projects, National Parks, Minerals, Economy, Panchayati Raj, Welfare Schemes & Cultural Heritage of MP.',
+          'Indian Polity, Constitution, Economy, Geography of India, Indian National Movement and Current Affairs (National & International).',
+        ],
+      },
+      {
+        subjectName: 'Part-A (2 & 3): General Hindi & General English / सामान्य हिंदी एवं अंग्रेजी (~28 Marks)',
+        topics: [
+          'सामान्य हिंदी (14 अंक): वर्णमाला, संधि, समास, उपसर्ग-प्रत्यय, तत्सम-तद्भव, पर्यायवाची, विलोम शब्द, मुहावरे-लोकोक्तियां, वाक्य शुद्धि, रस, छंद, अलंकार एवं अनेक शब्दों के लिए एक शब्द।',
+          'General English (14 Marks): Articles, Prepositions, Tenses, Active & Passive Voice, Direct-Indirect Narration, Synonyms, Antonyms, One-word Substitution, Idioms & Phrases, Error Spotting & Reading Comprehension.',
+        ],
+      },
+      {
+        subjectName: 'Part-A (4 & 5): General Mathematics & Reasoning / सामान्य गणित एवं तार्किक योग्यता (~28 Marks)',
+        topics: [
+          'General Mathematics (14 Marks): Number System, Simplification, LCM-HCF, Ratio & Proportion, Percentage, Profit & Loss, Simple & Compound Interest, Time & Work, Time Speed & Distance, Mensuration (2D/3D), Algebra, Geometry & Data Interpretation.',
+          'General Reasoning (14 Marks): Coding-Decoding, Number & Alphabet Series, Analogy, Blood Relations, Direction Sense, Syllogism, Seating Arrangement, Venn Diagrams, Mirror/Water Images & Non-Verbal Reasoning.',
+        ],
+      },
+      {
+        subjectName: 'Part-A (6 & 7): General Science & Computer Knowledge / सामान्य विज्ञान एवं कंप्यूटर ज्ञान (~28 Marks)',
+        topics: [
+          'General Science (14 Marks): Physics (Units, Motion, Work, Energy, Light, Electricity, Magnetism), Chemistry (Matter, Atomic Structure, Acids-Bases-Salts, Metals-Nonmetals, Everyday Chemistry), Biology (Cell, Human Systems, Nutrition, Diseases, Environment).',
+          'Basic Computer Knowledge (14 Marks): Generation of Computers, Input/Output Devices, Memory, Operating Systems (Windows), MS Office (MS Word, Excel, PowerPoint shortcuts), Internet, Networking, Emails & Cyber Security.',
+        ],
+      },
+      {
+        subjectName: 'Part-B: Civil Engineering (सिविल इंजीनियरिंग - 100 Marks)',
+        topics: [
+          'Building Materials & Construction: Stones, Bricks, Cement, Lime, Timber, Concrete Technology, Foundation, Masonry, Doors, Windows, Stairs, Roofs.',
+          'Surveying & Estimating/Costing: Chain, Compass, Plane Table, Leveling, Theodolite, Tachometry, Contouring, Valuation, Specification, Rate Analysis.',
+          'Strength of Materials & Structural Design: Simple Stresses & Strains, Bending Moment & Shear Force, Torsion, Columns, RCC Design (IS 456: Limit State & Working Stress), Steel Structures (IS 800).',
+          'Fluid Mechanics, Irrigation & Environmental Engineering: Fluid properties, Bernoulli theorem, Open channel flow, Pumps, Turbines, Hydrology, Canal design, Dams, Water supply, Quality of water, Sewage treatment & Solid waste management.',
+          'Soil Mechanics & Transportation Engineering: Origin of soil, Permeability, Compaction, Consolidation, Shear strength, Bearing capacity, Highway alignment, Pavements, Railway track components & Traffic engineering.',
+        ],
+      },
+      {
+        subjectName: 'Part-B: Electrical & Mechanical Engineering (विद्युत एवं यांत्रिकी - 100 Marks)',
+        topics: [
+          'Electrical Engineering: Basic Electrical Concepts, AC Fundamentals, Magnetic Circuits, Network Theorems, Electrical Machines (DC Machines, Transformers, 3-Phase Induction & Synchronous Motors), Generation, Transmission & Distribution, Switchgear & Protection, Utilization of Electrical Energy, Estimation & Costing, Basic Electronics.',
+          'Mechanical Engineering: Engineering Mechanics, Strength of Materials, Theory of Machines, Thermodynamics, IC Engines, Boilers, Steam Turbines, Fluid Mechanics & Hydraulic Machinery, Production Technology (Casting, Welding, Machining), Material Science, Industrial Engineering & Refrigeration/AC.',
+        ],
+      },
+    ],
+    preparationTips: [
+      'Balance both Part-A (100 Marks Non-Tech) and Part-B (100 Marks Technical)—scoring 75+ in Non-Tech gives a decisive edge in department allocation.',
+      'Practice previous years MPESB Vyapam Sub Engineer shift-wise papers to understand numerical vs conceptual question weightage in Part-B.',
+      'Focus on IS Codes (IS 456, IS 800, IS 1200) and Building Materials, Surveying, Estimation & Irrigation for Civil Engineering.',
+      'Attempt all 200 questions as there is no negative marking.',
+    ],
+    selectionProcess: [
+      'Stage 1: Online Computer Based Test (CBT - 200 Marks: 100 Non-Tech + 100 Technical)',
+      'Stage 2: Normalization of marks across shifts and preparation of Category / Quota-wise (Direct, Backlog, 50% Samvida) Merit List',
+      'Stage 3: Departmental Document Verification (DV) & Final Appointment Order',
+    ],
+    pdfDownloadUrl: 'https://esb.mp.gov.in',
+    publishedAt: '2026-10-02',
+    updatedAt: '2026-10-02',
+  },
+
   // 0. Railway RRB NTPC Graduate Level CEN 06/2026 Syllabus
   {
     id: 'syl-rrb-ntpc-graduate-level-2026',

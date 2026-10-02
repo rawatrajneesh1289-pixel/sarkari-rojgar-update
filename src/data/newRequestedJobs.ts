@@ -2,6 +2,143 @@ import { Job } from '../types';
 import { buildJob } from './jobBuilder';
 
 export const NEW_REQUESTED_JOBS: Job[] = [
+  // 0. MPESB Group 3 Sub Engineer and Other Post Re-Open Online Form 2026 (1,700 Posts)
+  buildJob({
+    id: 'job-mpesb-sub-engineer-2026',
+    slug: 'mpesb-group-3-sub-engineer-recruitment-2026',
+    title: 'MPESB Group 3 Sub Engineer and Other Post Re-Open Online Form 2026 (1,700 Posts)',
+    titleHi: 'एमपीईएसबी ग्रुप-3 सब इंजीनियर, ड्राफ्ट्समैन एवं अन्य पद संयुक्त भर्ती 2026 - री-ओपन ऑनलाइन फॉर्म (पद बढ़कर 1,700 हुए)',
+    organization: 'Madhya Pradesh Employees Selection Board (MPESB), Bhopal',
+    organizationHi: 'मध्य प्रदेश कर्मचारी चयन मंडल (MPESB / व्यापम), भोपाल',
+    postName: 'Group-3 Sub Engineer (Civil / Electrical / Mechanical / Electronics), Draftsman, Samaypal, Lab Technician & Equivalent Technical Posts',
+    totalVacancy: '1,700 Posts (Increased from 1,040 Posts | Direct, Backlog & 50% Samvida Reservation)',
+    qualification: '3-Year Engineering Diploma OR B.E. / B.Tech Degree in relevant discipline (Civil / Electrical / Mechanical / Electronics / Computer Science / Architecture) from a recognized Institute/University. For Draftsman/Surveyor/Technician: ITI or Diploma/B.Sc in relevant trade as per post code.',
+    category: 'State Government',
+    state: 'Madhya Pradesh',
+    status: 'OPEN',
+    publishedAt: '2026-10-02',
+    shortDescription: 'Madhya Pradesh Employees Selection Board (MPESB), Bhopal has officially re-opened the online application window and increased the total vacancies to 1,700 Posts (including revised 50% reservation for eligible contractual employees as per MP High Court order) for Group-3 Sub Engineer, Draftsman, Samaypal, and other equivalent posts. Candidates can apply online from 13/10/2026 to 27/10/2026 at esb.mp.gov.in.',
+    shortDescriptionHi: 'मध्य प्रदेश कर्मचारी चयन मंडल (MPESB) भोपाल द्वारा ग्रुप-3 उपयंत्री (Sub Engineer), मानचित्रकार (Draftsman), समयपाल एवं अन्य समकक्ष पदों की संयुक्त भर्ती परीक्षा 2026 के लिए ऑनलाइन आवेदन पुनः खोल (Re-Open) दिए गए हैं तथा कुल पदों की संख्या बढ़ाकर 1,700 कर दी गई है (संविदा कर्मियों हेतु 50% संशोधित आरक्षण सहित)। इच्छुक अभ्यर्थी 13 अक्टूबर 2026 से 27 अक्टूबर 2026 तक आधिकारिक पोर्टल esb.mp.gov.in पर ऑनलाइन आवेदन कर सकते हैं।',
+    applicationStartDate: '13/10/2026 (Re-Open) | पुराना: 29/08/2026',
+    applicationLastDate: '27/10/2026',
+    feeLastDate: '27/10/2026',
+    correctionLastDate: '28/10/2026 (Re-Open Edit Window: 13/10/2026 to 28/10/2026)',
+    examDate: 'दिसंबर 2026 - जनवरी 2027 (संशोधित परीक्षा तिथि / Revised Schedule)',
+    admitCardDate: 'परीक्षा से 7 से 10 दिन पूर्व जारी होगा',
+    feeGeneralObcEws: '₹ 560/- (परीक्षा शुल्क ₹ 500/- + कियोस्क पोर्टल शुल्क ₹ 60/- अनारक्षित एवं अन्य राज्य के अभ्यर्थियों हेतु)',
+    feeScStPh: '₹ 310/- (परीक्षा शुल्क ₹ 250/- + पोर्टल शुल्क ₹ 60/- म.प्र. के मूल निवासी SC / ST / OBC / EWS / दिव्यांग हेतु) | सीधी भर्ती बैकलॉग: कोई शुल्क नहीं (केवल पोर्टल शुल्क)',
+    feeFemale: '₹ 310/- (म.प्र. आरक्षित वर्ग) / ₹ 560/- (सामान्य एवं बाहरी राज्य)',
+    paymentMode: 'Online through MPOnline Kiosk / Net Banking / Debit Card / Credit Card / UPI (रजिस्टर्ड सिटिजन यूजर के माध्यम से लॉगिन कर फॉर्म भरने पर पोर्टल शुल्क ₹ 20/- देय होगा)',
+    minAge: '18 Years',
+    maxAge: '40 Years (General Male) / 45 Years (MP Reserved Categories, Females, Govt Employees & Samvida)',
+    ageCalculationDate: '01/01/2026',
+    ageRelaxationDetails: 'न्यूनतम आयु 18 वर्ष एवं अधिकतम आयु 40 वर्ष (अनारक्षित पुरुष)। मध्य प्रदेश के मूल निवासी अनुसूचित जाति (SC), अनुसूचित जनजाति (ST), अन्य पिछड़ा वर्ग (OBC), ईडब्ल्यूएस, शासकीय/निगम/मंडल/स्वशासी संस्था के कर्मचारियों, नगर सैनिकों, दिव्यांगजन एवं सभी वर्ग की महिला अभ्यर्थियों के लिए अधिकतम आयु सीमा 45 वर्ष (5 वर्ष की छूट) निर्धारित है। संविदा कर्मचारियों को भी संशोधित नियमानुसार आयु व 50% आरक्षण का लाभ देय है।',
+    salaryScale: '7th CPC Pay Matrix Level-8 (₹ 32,800 - 1,03,600/-) & Level-9 (₹ 36,200 - 1,14,800/-) for Sub Engineer | Level-5 to Level-7 (₹ 22,100 - 91,300/-) for Draftsman / Technician + DA, HRA & Allowances',
+    officialWebsite: 'https://esb.mp.gov.in',
+    applyUrl: 'https://esb.mponline.gov.in',
+    notificationUrl: 'https://esb.mp.gov.in',
+    postWiseVacancies: [
+      {
+        postName: 'Sub Engineer - Civil (उपयंत्री सिविल - PWD, WRD, PHE, Urban Admin, Rural Engg Service, Housing Board etc.)',
+        totalPosts: '1,180+ Posts (Direct, Backlog & 50% Samvida Quota)',
+        eligibility: '3-Year Diploma in Civil Engineering OR Degree (B.E./B.Tech) in Civil Engineering from AICTE/UGC recognized institution.',
+      },
+      {
+        postName: 'Sub Engineer - Electrical / Mechanical (उपयंत्री विद्युत एवं यांत्रिकी)',
+        totalPosts: '310+ Posts (Direct, Backlog & Samvida Quota)',
+        eligibility: '3-Year Diploma OR B.E./B.Tech Degree in Electrical / Mechanical / Electrical & Electronics Engineering from recognized University/Board.',
+      },
+      {
+        postName: 'Draftsman / Assistant Draftsman / Manchitrakar & Surveyor (मानचित्रकार एवं सर्वेयर)',
+        totalPosts: '115+ Posts',
+        eligibility: 'Diploma in Engineering / Architecture OR ITI Certificate in Draftsman (Civil/Mechanical) / Surveyor trade from recognized board.',
+      },
+      {
+        postName: 'Samaypal (Time Keeper), Lab Technician, Field Assistant & Other Group-3 Technical Posts',
+        totalPosts: '95+ Posts',
+        eligibility: '10+2 with Science (PCM) / 3-Year Engineering Diploma / B.Sc or GIS & Remote Sensing Certificate as per specific departmental post code.',
+      },
+    ],
+    selectionProcess: [
+      'चरण 1: ऑनलाइन कंप्यूटर आधारित संयुक्त लिखित परीक्षा (CBT - कुल 200 अंक, 200 वस्तुनिष्ठ प्रश्न, समय 3 घंटे)',
+      'चरण 2: भाग-अ (Non-Technical - 100 अंक): सामान्य ज्ञान, सामान्य हिंदी, सामान्य अंग्रेजी, सामान्य गणित, सामान्य तार्किक योग्यता, सामान्य विज्ञान एवं सामान्य कंप्यूटर ज्ञान',
+      'चरण 3: भाग-ब (Technical Subject - 100 अंक): संबंधित इंजीनियरिंग/तकनीकी ट्रेड (सिविल / इलेक्ट्रिकल / मैकेनिकल आदि) पर आधारित 100 प्रश्न (कोई नेगेटिव मार्किंग नहीं)',
+      'चरण 4: विभागवार एवं श्रेणीवार (सीधी भर्ती, बैकलॉग एवं 50% संविदा कोटा) मेरिट सूची तथा मूल दस्तावेज सत्यापन (Document Verification)',
+    ],
+    howToApplySteps: [
+      'चरण 1: मध्य प्रदेश कर्मचारी चयन मंडल की आधिकारिक वेबसाइट esb.mp.gov.in अथवा MPOnline पोर्टल esb.mponline.gov.in पर जाएं।',
+      'चरण 2: "Group-3 Sub Engineer, Sahayak Manchitrakar, Technician and Other Equivalent Combined Recruitment Test - 2026 (Re-Open Application)" लिंक पर क्लिक करें।',
+      'चरण 3: यदि आपका MPESB उम्मीदवार प्रोफाइल पंजीकरण (Candidate Profile Registration) नहीं बना है, तो पहले आधार e-KYC के माध्यम से प्रोफाइल पंजीयन पूर्ण करें।',
+      'चरण 4: अपना सामान्य पंजीकरण क्रमांक (Profile ID) और जन्मतिथि दर्ज कर लॉगिन करें।',
+      'चरण 5: संशोधित नियमपुस्तिका (Revised Rulebook) के अनुसार अपनी श्रेणी, संविदा कर्मी अनुभव (यदि लागू हो) एवं विभागवार पोस्ट कोड वरीयता (Post Preference) चुनें।',
+      'चरण 6: पूर्व में आवेदन कर चुके अभ्यर्थी भी अपनी पद वरीयता (Post Code Preference) व संविदा विवरण को 13/10/2026 से 28/10/2026 के बीच अपडेट/संशोधित कर सकते हैं।',
+      'चरण 7: परीक्षा शहर का चयन करें, निर्धारित शुल्क का ऑनलाइन भुगतान करें और भरे हुए री-ओपन आवेदन पत्र का प्रिंटआउट सुरक्षित रख लें।',
+    ],
+    requiredDocuments: [
+      '10वीं एवं 12वीं कक्षा की अंकसूची व प्रमाण पत्र (जन्मतिथि सत्यापन हेतु)',
+      '3-वर्षीय इंजीनियरिंग डिप्लोमा अथवा B.E. / B.Tech डिग्री या संबंधित ट्रेड ITI की समस्त सेमेस्टर/वर्षों की अंकसूची',
+      'मध्य प्रदेश राज्य रोजगार कार्यालय का जीवित पंजीयन प्रमाण पत्र (MP Rojgar Panjiyan)',
+      'मध्य प्रदेश का मूल निवास प्रमाण पत्र (आरक्षित वर्ग एवं आयु छूट हेतु)',
+      'जाति प्रमाण पत्र (SC / ST / OBC / EWS प्रमाण पत्र सक्षम अधिकारी द्वारा जारी)',
+      'संविदा कर्मचारी अनुभव प्रमाण पत्र (50% संविदा आरक्षण का लाभ लेने वाले पात्र संविदा कर्मियों हेतु)',
+      'नवीनतम रंगीन पासपोर्ट साइज फोटोग्राफ (सफेद बैकग्राउंड, आवेदक का नाम व फोटो खिंचवाने की तिथि सहित) एवं हस्ताक्षर व हस्तलिखित घोषणा',
+      'आधार कार्ड (e-KYC एवं बायोमेट्रिक सत्यापन हेतु अनिवार्य)',
+    ],
+    importantLinks: [
+      {
+        label: 'Apply Online - Re-Open Link (ऑनलाइन आवेदन लिंक - 13/10/2026 से 27/10/2026)',
+        url: 'https://esb.mponline.gov.in',
+        type: 'APPLY',
+        isExternal: true,
+      },
+      {
+        label: 'Download Re-Open Corrigendum & Revised Vacancy Notice (री-ओपन एवं 1700 पदों की संशोधित सूचना)',
+        url: 'https://esb.mp.gov.in',
+        type: 'NOTIFICATION',
+        isExternal: true,
+      },
+      {
+        label: 'Download Official Revised Rulebook PDF (विस्तृत संशोधित नियमपुस्तिका)',
+        url: 'https://esb.mp.gov.in',
+        type: 'NOTIFICATION',
+        isExternal: true,
+      },
+      {
+        label: 'View Detailed Syllabus & Exam Pattern (200 अंकों का विस्तृत सिलेबस व पैटर्न)',
+        url: '/syllabus/mpesb-group-3-sub-engineer-syllabus',
+        type: 'SYLLABUS',
+      },
+      {
+        label: 'Official MPESB Website (मध्य प्रदेश कर्मचारी चयन मंडल आधिकारिक पोर्टल)',
+        url: 'https://esb.mp.gov.in',
+        type: 'WEBSITE',
+        isExternal: true,
+      },
+    ],
+    faqs: [
+      {
+        question: 'MPESB Group 3 Sub Engineer भर्ती 2026 के ऑनलाइन फॉर्म फिर से क्यों और कब से री-ओपन हो रहे हैं?',
+        answer: 'माननीय म.प्र. उच्च न्यायालय के आदेशानुसार संविदा कर्मचारियों के 50% आरक्षण के संशोधित प्रावधानों एवं विभिन्न विभागों में पदों की संख्या बढ़कर 1,700 हो जाने के कारण MPESB ने ऑनलाइन आवेदन पुनः खोल (Re-Open) दिए हैं। नए आवेदन 13 अक्टूबर 2026 से 27 अक्टूबर 2026 तक भरे जाएंगे तथा संशोधन 28 अक्टूबर 2026 तक किया जा सकेगा।',
+      },
+      {
+        question: 'क्या जिन अभ्यर्थियों ने पहले (अगस्त-सितंबर में) फॉर्म भर दिया था, उन्हें दोबारा फॉर्म भरना होगा?',
+        answer: 'जिन अभ्यर्थियों ने पूर्व में सफलतापूर्वक आवेदन किया है, उन्हें नया फॉर्म भरने की आवश्यकता नहीं है; परंतु वे री-ओपन विंडो (13 अक्टूबर से 28 अक्टूबर 2026) के दौरान अपने फॉर्म में नए बढ़े हुए पदों की वरीयता (Post Preference) जोड़ सकते हैं या संविदा कोटा विवरण अपडेट कर सकते हैं।',
+      },
+      {
+        question: 'अब एमपी सब इंजीनियर भर्ती 2026 में कुल कितने पद हैं?',
+        answer: 'संशोधित विज्ञप्ति के बाद अब ग्रुप-3 सब इंजीनियर, ड्राफ्ट्समैन, समयपाल व समकक्ष पदों की कुल संख्या बढ़कर 1,700 पद हो गई है।',
+      },
+      {
+        question: 'एमपी सब इंजीनियर की नई परीक्षा तिथि (Revised Exam Date) क्या है?',
+        answer: 'आवेदन प्रक्रिया पुनः खुलने के कारण अक्टूबर में प्रस्तावित परीक्षा को आगे बढ़ा दिया गया है। अब यह परीक्षा दिसंबर 2026 से जनवरी 2027 के मध्य आयोजित की जाएगी।',
+      },
+      {
+        question: 'क्या इस परीक्षा में नेगेटिव मार्किंग होती है?',
+        answer: 'नहीं, MPESB ग्रुप-3 सब इंजीनियर परीक्षा में कुल 200 प्रश्न (200 अंक: 100 अंक नॉन-टेक + 100 अंक टेक्निकल) पूछे जाते हैं और इसमें कोई नकारात्मक अंकन (No Negative Marking) नहीं होता है।',
+      },
+    ],
+  }),
+
   // 0. Railway RRB NTPC Graduate Level Online Form 2026 (CEN 06/2026)
   buildJob({
     id: 'job-rrb-ntpc-graduate-level-2026',

@@ -56,7 +56,7 @@ export const AdmitCardListPage: React.FC = () => {
       <SeoHead
         title="एडमिट कार्ड 2026 | Sarkari Exam Admit Card, Hall Ticket & Exam City Download"
         description="विभिन्न प्रतियोगी परीक्षाओं के एडमिट कार्ड, एग्जाम सिटी स्लिप एवं हॉल टिकट डाउनलोड करें। CSBC, UGC NET, UPSC CDS/NDA, AIIMS, SBI PO, SSC, UP Police एवं DSSSB प्रवेश पत्र।"
-        canonicalUrl="https://sarkarirozgarupdate.com/admit-card"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/admit-card"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

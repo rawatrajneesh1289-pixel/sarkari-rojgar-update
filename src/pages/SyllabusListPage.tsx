@@ -17,7 +17,7 @@ export const SyllabusListPage: React.FC = () => {
       <SeoHead
         title="परीक्षा सिलेबस 2026 | Sarkari Exam Syllabus & Exam Pattern PDF"
         description="सभी सरकारी प्रतियोगी परीक्षाओं का टॉपिक-वाइज विस्तृत सिलेबस एवं एग्जाम पैटर्न। SSC, Railway, UPSC, Bank, Police भर्ती परीक्षा पाठ्यक्रम पीडीएफ डाउनलोड करें।"
-        canonicalUrl="https://sarkarirozgarupdate.com/syllabus"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/syllabus"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

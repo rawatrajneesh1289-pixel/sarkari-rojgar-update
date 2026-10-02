@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
                 <span className="text-xl font-extrabold text-white tracking-tight">
                   SARKARI ROZGAR <span className="text-amber-500">UPDATE</span>
                 </span>
-                <p className="text-xs text-slate-400">sarkarirozgarupdate.com</p>
+                <p className="text-xs text-slate-400">sarkari-rozgar-update.netlify.app</p>
               </div>
             </div>
 
@@ -180,7 +180,7 @@ export const Footer: React.FC = () => {
           </p>
 
           <div className="flex items-center gap-4">
-            <span>Domain: sarkarirozgarupdate.com</span>
+            <span>Domain: sarkari-rozgar-update.netlify.app</span>
             <button
               onClick={scrollToTop}
               className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition flex items-center gap-1"

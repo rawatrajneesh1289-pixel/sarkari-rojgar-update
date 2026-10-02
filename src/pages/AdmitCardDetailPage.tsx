@@ -69,7 +69,7 @@ export const AdmitCardDetailPage: React.FC<AdmitCardDetailPageProps> = ({ slug }
       <SeoHead
         title={`${card.examName} Admit Card 2026 - Hall Ticket & Exam City Link`}
         description={`${card.examNameHi || card.examName}: परीक्षा तिथि ${card.examDate}। प्रवेश पत्र जारी स्थिति ${card.releaseDate}। डाउनलोड करने की प्रक्रिया एवं सीधा लिंक।`}
-        canonicalUrl={`https://sarkarirozgarupdate.com/admit-card/${card.slug}`}
+        canonicalUrl={`https://sarkari-rozgar-update.netlify.app/admit-card/${card.slug}`}
         schema={eventSchema}
       />
 

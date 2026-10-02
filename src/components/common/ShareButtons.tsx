@@ -8,7 +8,7 @@ interface ShareButtonsProps {
 
 export const ShareButtons: React.FC<ShareButtonsProps> = ({ title, url }) => {
   const [copied, setCopied] = useState(false);
-  const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://sarkarirozgarupdate.com');
+  const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://sarkari-rozgar-update.netlify.app');
   const shareText = `${title} - सरकारी नौकरी और परीक्षा की ताजा जानकारी Sarkari Rozgar Update पर देखें:\n${shareUrl}`;
 
   const copyToClipboard = () => {

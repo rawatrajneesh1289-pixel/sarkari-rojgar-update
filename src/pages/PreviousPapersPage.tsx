@@ -87,7 +87,7 @@ export const PreviousPapersPage: React.FC = () => {
       <SeoHead
         title="पुराने प्रश्न पत्र हल सहित (2020-2025) | Previous Year Question Papers PDF Solved"
         description="SSC CGL, CHSL, GD, Railway NTPC, Group D, UPSC CSE, UP/MP Police, BPSC, CTET, UGC NET, Banking के 2020 से 2025 तक के सभी रियल प्रश्न पत्र एवं आधिकारिक उत्तर कुंजी PDF।"
-        canonicalUrl="https://sarkarirozgarupdate.com/previous-papers"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/previous-papers"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

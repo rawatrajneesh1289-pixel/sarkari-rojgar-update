@@ -9,7 +9,7 @@ export const DisclaimerPage: React.FC = () => {
       <SeoHead
         title="सांविधिक अस्वीकरण (Disclaimer) | Sarkari Rozgar Update"
         description="Sarkari Rozgar Update का अस्वीकरण (Disclaimer) - यह एक स्वतंत्र सूचनात्मक वेबसाइट है और किसी भी सरकारी निकाय से सम्बद्ध नहीं है।"
-        canonicalUrl="https://sarkarirozgarupdate.com/disclaimer"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/disclaimer"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
@@ -34,7 +34,7 @@ export const DisclaimerPage: React.FC = () => {
               गैर-सरकारी मंच की स्पष्ट घोषणा:
             </h2>
             <p>
-              <strong>Sarkari Rozgar Update (sarkarirozgarupdate.com)</strong> एक स्वतंत्र, निजी और गैर-सरकारी सूचना पोर्टल है। यह वेबसाइट भारत सरकार, किसी भी राज्य सरकार, संघ राज्य क्षेत्र अथवा इनके किसी भी मंत्रालय, आयोग या विभाग से प्रत्यक्ष या अप्रत्यक्ष रूप से संबद्ध, अधिकृत या संचालित नहीं है।
+              <strong>Sarkari Rozgar Update (sarkari-rozgar-update.netlify.app)</strong> एक स्वतंत्र, निजी और गैर-सरकारी सूचना पोर्टल है। यह वेबसाइट भारत सरकार, किसी भी राज्य सरकार, संघ राज्य क्षेत्र अथवा इनके किसी भी मंत्रालय, आयोग या विभाग से प्रत्यक्ष या अप्रत्यक्ष रूप से संबद्ध, अधिकृत या संचालित नहीं है।
             </p>
           </div>
 

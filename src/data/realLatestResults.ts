@@ -1,6 +1,10 @@
 import { Result } from '../types';
+import { NEW_REQUESTED_RESULTS_PART1 } from './newRequestedResultsPart1';
+import { NEW_REQUESTED_RESULTS_PART2 } from './newRequestedResultsPart2';
 
 export const REAL_LATEST_RESULTS: Result[] = [
+  ...NEW_REQUESTED_RESULTS_PART1,
+  ...NEW_REQUESTED_RESULTS_PART2,
   {
     id: 'res-rrb-group-d-2026',
     slug: 'railway-rrb-group-d-answer-key-result-2026',
@@ -254,8 +258,8 @@ export const REAL_LATEST_RESULTS: Result[] = [
   {
     id: 'res-nta-csir-ugc-net-2026',
     slug: 'nta-csir-ugc-net-june-result-cutoff-2026',
-    examName: 'NTA CSIR UGC NET June Result / Cutoff 2026 – Out',
-    examNameHi: 'एनटीए सीएसआईआर यूजीसी नेट जून परीक्षा परिणाम एवं विषयवार कट-ऑफ पर्सेंटाइल 2026 घोषित',
+    examName: 'NTA CSIR UGC NET June Result, Cutoff & E-Certificate 2026 – Out',
+    examNameHi: 'एनटीए सीएसआईआर यूजीसी नेट जून परीक्षा परिणाम, विषयवार कट-ऑफ एवं ई-सर्टिफिकेट 2026 घोषित',
     organization: 'National Testing Agency (NTA) & Council of Scientific and Industrial Research',
     postName: 'Junior Research Fellowship (JRF), Assistant Professor & Ph.D Admission (Science Subjects)',
     resultDate: '06 सितंबर 2026',
@@ -376,8 +380,8 @@ export const REAL_LATEST_RESULTS: Result[] = [
   {
     id: 'res-upsc-capf-ac-2026',
     slug: 'upsc-capf-ac-result-2026',
-    examName: 'UPSC CAPF AC Result 2026 – Out (Central Armed Police Forces)',
-    examNameHi: 'संघ लोक सेवा आयोग (UPSC) केंद्रीय सशस्त्र पुलिस बल (असिस्टेंट कमांडेंट) लिखित परीक्षा परिणाम 2026',
+    examName: 'UPSC CAPF AC Result 2026 & CAPF AC 2025 Final Marks – Out',
+    examNameHi: 'संघ लोक सेवा आयोग (UPSC) केंद्रीय सशस्त्र पुलिस बल (असिस्टेंट कमांडेंट) लिखित परीक्षा परिणाम 2026 एवं अंतिम प्राप्तांक (Final Marks)',
     organization: 'Union Public Service Commission (UPSC, New Delhi)',
     postName: 'Assistant Commandant (AC) in BSF, CRPF, CISF, ITBP & SSB',
     resultDate: '06 सितंबर 2026',

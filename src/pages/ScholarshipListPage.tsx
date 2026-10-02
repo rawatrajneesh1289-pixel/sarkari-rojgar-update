@@ -91,7 +91,7 @@ export const ScholarshipListPage: React.FC = () => {
       <SeoHead
         title="छात्रवृत्ति 2026-27 | National & State Scholarship Schemes Online Form"
         description="भारत की सभी प्रमुख राष्ट्रीय एवं राज्य छात्रवृत्तियां: NSP, AICTE प्रगति, UP Scholarship, बिहार पोस्ट मैट्रिक, मेधावी विद्यार्थी (MMVY), इंस्पायर, PMSS व अन्य। पात्रता व ऑनलाइन आवेदन।"
-        canonicalUrl="https://sarkarirozgarupdate.com/scholarship"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/scholarship"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

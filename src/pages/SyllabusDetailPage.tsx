@@ -28,7 +28,7 @@ export const SyllabusDetailPage: React.FC<SyllabusDetailPageProps> = ({ slug }) 
       <SeoHead
         title={`${syl.examName} Syllabus 2026 PDF Download - Exam Pattern & Marking Scheme`}
         description={`${syl.examName} विस्तृत पाठ्यक्रम 2026। परीक्षा पैटर्न, अंक विभाजन एवं विषयवार टॉपिक्स की सूची। आधिकारिक पीडीएफ डाउनलोड करें।`}
-        canonicalUrl={`https://sarkarirozgarupdate.com/syllabus/${syl.slug}`}
+        canonicalUrl={`https://sarkari-rozgar-update.netlify.app/syllabus/${syl.slug}`}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

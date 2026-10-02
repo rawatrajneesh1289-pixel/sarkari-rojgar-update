@@ -81,7 +81,7 @@ export const JobDetailPage: React.FC<JobDetailPageProps> = ({ slug }) => {
     hiringOrganization: {
       '@type': 'Organization',
       name: job.organization,
-      sameAs: job.importantLinks?.find((l) => l.type === 'WEBSITE')?.url || 'https://sarkarirozgarupdate.com',
+      sameAs: job.importantLinks?.find((l) => l.type === 'WEBSITE')?.url || 'https://sarkari-rozgar-update.netlify.app',
     },
     jobLocation: {
       '@type': 'Place',
@@ -106,7 +106,7 @@ export const JobDetailPage: React.FC<JobDetailPageProps> = ({ slug }) => {
       <SeoHead
         title={`${job.title} - Notification, Apply Online, Eligibility`}
         description={`${job.titleHi || job.title}: कुल ${job.totalVacancy} पद। योग्यता: ${job.qualification}। अंतिम तिथि: ${job.applicationLastDate}। ऑनलाइन आवेदन लिंक एवं विस्तृत जानकारी।`}
-        canonicalUrl={`https://sarkarirozgarupdate.com/jobs/${job.slug}`}
+        canonicalUrl={`https://sarkari-rozgar-update.netlify.app/jobs/${job.slug}`}
         schema={jobSchema}
       />
 

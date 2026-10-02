@@ -79,7 +79,7 @@ export const SchemesListPage: React.FC = () => {
       <SeoHead
         title="सरकारी योजनाएं 2026 | Sarkari Yojana, PM & State Schemes Portal"
         description="केन्द्र एवं राज्य सरकारों की प्रमुख कल्याणकारी योजनाएं। पीएम किसान, फसल बीमा, आयुष्मान भारत, पीएम आवास 2.0, पीएम सूर्य घर, उज्ज्वला 2.0, लखपति दीदी, सुकन्या समृद्धि, मुद्रा लोन, पीएम विश्वकर्मा एवं रोजगार प्रोत्साहन योजनाओं की सम्पूर्ण जानकारी।"
-        canonicalUrl="https://sarkarirozgarupdate.com/sarkari-yojana"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/sarkari-yojana"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

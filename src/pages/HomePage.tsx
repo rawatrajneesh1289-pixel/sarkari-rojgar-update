@@ -159,11 +159,11 @@ export const HomePage: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Sarkari Rozgar Update',
-    url: 'https://sarkarirozgarupdate.com',
+    url: 'https://sarkari-rozgar-update.netlify.app',
     description: 'सरकारी नौकरी और परीक्षा की हर जरूरी जानकारी एक जगह - Latest Jobs, Admit Card, Results, Answer Key & Sarkari Yojana',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://sarkarirozgarupdate.com/search?q={search_term_string}',
+      target: 'https://sarkari-rozgar-update.netlify.app/search?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };
@@ -173,7 +173,7 @@ export const HomePage: React.FC = () => {
       <SeoHead
         title="Sarkari Rozgar Update | सरकारी नौकरी, Admit Card, Results, Sarkari Yojana 2026"
         description="Sarkari Rozgar Update (SRU) - भारत का विश्वसनीय रोजगार पोर्टल। SSC, Railway, UPSC, Bank, Police Bharti, MP Vacancy, Admit Card, Results, Answer Key एवं Sarkari Yojana की सटीक सूचना।"
-        canonicalUrl="https://sarkarirozgarupdate.com"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app"
         schema={websiteSchema}
       />
 
@@ -498,7 +498,7 @@ export const HomePage: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                {allAdmissions.slice(0, 4).map((adm) => (
+                {allAdmissions.slice(0, 8).map((adm) => (
                   <div
                     key={adm.id}
                     onClick={() => navigate(`/admission/${adm.slug}`)}

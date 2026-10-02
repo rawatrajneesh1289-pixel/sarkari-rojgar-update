@@ -76,7 +76,7 @@ export const Header: React.FC = () => {
               🇮🇳 भारत का विश्वसनीय सरकारी रोजगार एवं परीक्षा सूचना पोर्टल
             </span>
             <span>•</span>
-            <span>sarkarirozgarupdate.com</span>
+            <span>sarkari-rozgar-update.netlify.app</span>
           </div>
           <div className="flex items-center gap-4 text-slate-300">
             <button

@@ -35,9 +35,9 @@ export const AdmissionListPage: React.FC = () => {
   return (
     <>
       <SeoHead
-        title="प्रवेश सूचना 2026 | College, University Admission & Entrance Exam Form"
-        description="विभिन्न विश्वविद्यालयों, तकनीकी संस्थानों और विद्यालयों में प्रवेश सूचना 2026। BLET, RIMC, इलाहाबाद विवि PhD, AIBE XXII, IIT JAM, UP DELED, NEET UG, SAV Jamui, SCVT ITI, IIM CAT, CLAT 2027 ऑनलाइन फॉर्म व काउंसलिंग।"
-        canonicalUrl="https://sarkarirozgarupdate.com/admission"
+        title="प्रवेश सूचना 2026-27 | Active Admission & Entrance Exam Online Form"
+        description="सक्रिय राष्ट्रीय एवं राज्य स्तरीय प्रवेश परीक्षाएं (Active Admissions 2026-27): Bihar BLET 2026, NVS Class 9th & 11th Date Extended 2027-28, AIBE 22 (XXII), IIT GATE 2027, CLAT 2026 एवं IIT JAM 2027 ऑनलाइन आवेदन फॉर्म।"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/admission"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">

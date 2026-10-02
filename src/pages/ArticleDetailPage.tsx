@@ -49,7 +49,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
       name: 'Sarkari Rozgar Update',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://sarkarirozgarupdate.com/logo.png',
+        url: 'https://sarkari-rozgar-update.netlify.app/logo.png',
       },
     },
     description: article.summary,
@@ -60,7 +60,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ slug }) =>
       <SeoHead
         title={`${article.title} | Sarkari Rozgar Update Guide`}
         description={article.summary}
-        canonicalUrl={`https://sarkarirozgarupdate.com/articles/${article.slug}`}
+        canonicalUrl={`https://sarkari-rozgar-update.netlify.app/articles/${article.slug}`}
         schema={articleSchema}
       />
 

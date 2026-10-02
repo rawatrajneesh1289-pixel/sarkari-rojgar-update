@@ -25,7 +25,7 @@ export const ContactPage: React.FC = () => {
       <SeoHead
         title="Contact Us (संपर्क करें) | Sarkari Rozgar Update"
         description="Sarkari Rozgar Update सहायता केंद्र। किसी भी सुझाव, त्रुटि सुधार अथवा सहायता के लिए हमारी टीम से संपर्क करें।"
-        canonicalUrl="https://sarkarirozgarupdate.com/contact"
+        canonicalUrl="https://sarkari-rozgar-update.netlify.app/contact"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
@@ -45,14 +45,14 @@ export const ContactPage: React.FC = () => {
             <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
               <Mail className="w-5 h-5 text-blue-600 mb-2" />
               <h3 className="font-bold text-xs text-slate-800 uppercase tracking-wider">ईमेल (Email)</h3>
-              <p className="text-xs text-slate-600 mt-1 font-medium">help@sarkarirozgarupdate.com</p>
+              <p className="text-xs text-slate-600 mt-1 font-medium">help@sarkari-rozgar-update.netlify.app</p>
               <p className="text-[11px] text-slate-400">24-48 घंटों में उत्तर</p>
             </div>
 
             <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
               <MessageSquare className="w-5 h-5 text-blue-600 mb-2" />
               <h3 className="font-bold text-xs text-slate-800 uppercase tracking-wider">सूचना सुधार (Corrections)</h3>
-              <p className="text-xs text-slate-600 mt-1 font-medium">editor@sarkarirozgarupdate.com</p>
+              <p className="text-xs text-slate-600 mt-1 font-medium">editor@sarkari-rozgar-update.netlify.app</p>
               <p className="text-[11px] text-slate-400">त्रुटि सुधार डेस्क</p>
             </div>
 

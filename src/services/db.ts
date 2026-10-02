@@ -28,17 +28,17 @@ import {
 import { isJobApplicationOpen } from '../data/realLatestJobs';
 
 const STORAGE_KEYS = {
-  JOBS: 'sru_db_jobs_v9',
+  JOBS: 'sru_db_jobs_v10',
   ADMIT_CARDS: 'sru_db_admit_cards_v5',
-  RESULTS: 'sru_db_results_v1',
+  RESULTS: 'sru_db_results_v2',
   ANSWER_KEYS: 'sru_db_answer_keys_v3',
   SCHEMES: 'sru_db_schemes_v1',
   SCHOLARSHIPS: 'sru_db_scholarships_v4',
-  ADMISSIONS: 'sru_db_admissions_v4',
-  SYLLABUS: 'sru_db_syllabus_v2',
+  ADMISSIONS: 'sru_db_admissions_v6',
+  SYLLABUS: 'sru_db_syllabus_v3',
   PREVIOUS_PAPERS: 'sru_db_previous_papers_v2',
   ARTICLES: 'sru_db_articles_v1',
-  ANNOUNCEMENTS: 'sru_db_announcements_v5',
+  ANNOUNCEMENTS: 'sru_db_announcements_v8',
   ADMIN_AUTH: 'sru_admin_token',
 };
 
@@ -71,6 +71,7 @@ export const db = {
     if (
       !Array.isArray(stored) ||
       stored.some((j) => !isJobApplicationOpen(j)) ||
+      !stored.some((j) => j.id === 'job-mpesb-sub-engineer-2026') ||
       !stored.some((j) => j.id === 'job-rrb-ntpc-graduate-level-2026') ||
       !stored.some((j) => j.id === 'job-rrb-ntpc-undergraduate-10-plus-2-2026') ||
       !stored.some((j) => j.id === 'job-rrb-paramedical-staff-cen-05-2026') ||
@@ -158,7 +159,12 @@ export const db = {
   // Results
   getResults(): Result[] {
     const stored = getStoredItem<Result[]>(STORAGE_KEYS.RESULTS, INITIAL_RESULTS);
-    if (!Array.isArray(stored) || stored.length < 12 || stored.some((r) => r.isDemo)) {
+    if (
+      !Array.isArray(stored) ||
+      stored.length < 70 ||
+      stored.some((r) => r.isDemo) ||
+      !stored.some((r) => r.id === 'res-rrb-alp-cbt2-2026')
+    ) {
       setStoredItem(STORAGE_KEYS.RESULTS, INITIAL_RESULTS);
       return INITIAL_RESULTS;
     }
@@ -268,7 +274,14 @@ export const db = {
   getAdmissions(): AdmissionUpdate[] {
     const stored = getStoredItem<AdmissionUpdate[]>(STORAGE_KEYS.ADMISSIONS, INITIAL_ADMISSIONS);
     const hasDuplicates = Array.isArray(stored) && new Set(stored.map((a) => a.id)).size !== stored.length;
-    if (!Array.isArray(stored) || stored.length < 10 || hasDuplicates || stored.some((a) => a.isDemo)) {
+    if (
+      !Array.isArray(stored) ||
+      stored.length !== INITIAL_ADMISSIONS.length ||
+      hasDuplicates ||
+      stored.some((a) => a.isDemo) ||
+      !stored.some((a) => a.id === 'adm-iit-gate-2027') ||
+      !stored.some((a) => a.id === 'adm-nvs-class-11th-2027')
+    ) {
       setStoredItem(STORAGE_KEYS.ADMISSIONS, INITIAL_ADMISSIONS);
       return INITIAL_ADMISSIONS;
     }
