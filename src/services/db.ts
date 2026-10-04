@@ -29,7 +29,7 @@ import { isJobApplicationOpen } from '../data/realLatestJobs';
 
 const STORAGE_KEYS = {
   JOBS: 'sru_db_jobs_v10',
-  ADMIT_CARDS: 'sru_db_admit_cards_v5',
+  ADMIT_CARDS: 'sru_db_admit_cards_v7',
   RESULTS: 'sru_db_results_v2',
   ANSWER_KEYS: 'sru_db_answer_keys_v3',
   SCHEMES: 'sru_db_schemes_v1',
@@ -38,7 +38,7 @@ const STORAGE_KEYS = {
   SYLLABUS: 'sru_db_syllabus_v3',
   PREVIOUS_PAPERS: 'sru_db_previous_papers_v2',
   ARTICLES: 'sru_db_articles_v1',
-  ANNOUNCEMENTS: 'sru_db_announcements_v8',
+  ANNOUNCEMENTS: 'sru_db_announcements_v9',
   ADMIN_AUTH: 'sru_admin_token',
 };
 
@@ -131,7 +131,7 @@ export const db = {
       !stored.some((c) => c.id === 'ac-rpsc-rajasthan-police-si-2021-reexam-admit-card-2026') ||
       !stored.some((c) => c.id === 'ac-mpesb-van-rakshak-jail-prahari-pet-schedule-2026') ||
       !stored.some((c) => c.id === 'ac-upsssc-junior-assistant-typing-test-exam-date-2026') ||
-      !stored.some((c) => c.id === 'ac-rrb-section-controller-exam-date-2026')
+      !stored.some((c) => c.slug === 'railway-rrb-section-controller-exam-city-admit-card-2026')
     ) {
       setStoredItem(STORAGE_KEYS.ADMIT_CARDS, INITIAL_ADMIT_CARDS);
       return INITIAL_ADMIT_CARDS;

@@ -39,6 +39,14 @@ export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
     type: 'RESULT',
   },
   {
+    id: 'ann-rrb-section-controller-city-admit-card-2026',
+    text: 'Railway RRB Section Controller Exam Date & City Slip 2026 Out: CBT Exam on 12-13 October 2026',
+    textHi: 'रेलवे आरआरबी सेक्शन कंट्रोलर (CEN 03/2026) परीक्षा शहर व तिथि पर्ची जारी: सीबीटी परीक्षा 12 व 13 अक्टूबर 2026 को',
+    linkUrl: '/admit-card/railway-rrb-section-controller-exam-city-admit-card-2026',
+    isLive: true,
+    type: 'ADMIT_CARD',
+  },
+  {
     id: 'ann-ssc-cgl-tier1-city-admit-card-2026',
     text: 'SSC CGL Tier 1 Exam City Slip & Application Status 2026 Released: Check Exam Date & City at ssc.gov.in',
     textHi: 'एसएससी सीजीएल टियर-1 परीक्षा शहर (Exam City) एवं स्टेटस जारी: ssc.gov.in से अपनी परीक्षा तिथि व शहर चेक करें',

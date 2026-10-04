@@ -1,7 +1,71 @@
 import { AdmitCard } from '../types';
 
 export const NEW_REQUESTED_ADMIT_CARDS: AdmitCard[] = [
-  // 0. SSC CGL Tier 1 Exam City / Application Status & Admit Card 2026
+  // 0. Railway RRB Section Controller Exam Date & City Details / Admit Card 2026
+  {
+    id: 'ac-rrb-section-controller-exam-date-2026',
+    slug: 'railway-rrb-section-controller-exam-city-admit-card-2026',
+    examName: 'Railway RRB Section Controller Exam Date & City Intimation Slip / Admit Card 2026',
+    examNameHi: 'रेलवे भर्ती बोर्ड आरआरबी सेक्शन कंट्रोलर (CEN 03/2026) परीक्षा शहर व तिथि सूचना पर्ची एवं एडमिट कार्ड 2026 जारी',
+    organization: 'Railway Recruitment Boards (RRB) / Ministry of Railways',
+    postName: 'Section Controller (Traffic Operating Department - Level 6 Pay Matrix)',
+    totalVacancy: '119 Posts (CEN 03/2026 Nationwide across all RRBs)',
+    examDate: '12/10/2026 एवं 13/10/2026 (शनिवार व रविवार - Computer Based Test CBT)',
+    status: 'Released',
+    releaseDate: '02/10/2026 (Exam City & Date Slip Live | Admit Card on 08/10/2026)',
+    downloadUrl: 'https://rrbapply.gov.in',
+    officialNotificationUrl: 'https://www.rrbcdg.gov.in',
+    instructions: [
+      'रेलवे भर्ती बोर्ड (RRB) द्वारा CEN 03/2026 के अंतर्गत सेक्शन कंट्रोलर (Section Controller) पदों हेतु कंप्यूटर आधारित परीक्षा (CBT) का आयोजन 12 और 13 अक्टूबर 2026 को देश के विभिन्न परीक्षा केंद्रों पर आयोजित किया जा रहा है।',
+      'परीक्षा शहर एवं तिथि आवंटन पर्ची (Exam City & Date Intimation Slip) 02 अक्टूबर 2026 को आधिकारिक पोर्टल rrbapply.gov.in पर सक्रिय कर दी गई है। सभी पंजीकृत अभ्यर्थी तुरंत अपना परीक्षा शहर व आवंटित शिफ्ट चेक कर लें।',
+      'यह सिटी इंटिमेशन स्लिप केवल यात्रा पूर्व तैयारी एवं शहर की जानकारी के लिए है। यह परीक्षा हॉल में प्रवेश हेतु मान्य ई-कॉल लेटर (प्रवेश पत्र) नहीं है।',
+      'मुख्य ई-कॉल लेटर (CBT Admit Card) संबंधित अभ्यर्थी की परीक्षा तिथि से 4 दिन पूर्व (08 अक्टूबर 2026 से) डाउनलोड हेतु उपलब्ध होगा, जिसमें परीक्षा केंद्र का पूरा पता, शिफ्ट समय एवं गेट बंद होने का समय अंकित रहेगा।',
+      'अनुसूचित जाति / अनुसूचित जनजाति (SC/ST) वर्ग के पात्र अभ्यर्थियों के लिए निःशुल्क रेल स्लीपर क्लास यात्रा प्राधिकरण पास (Free Travel Pass) भी एग्जाम सिटी स्लिप के साथ डाउनलोड हेतु उपलब्ध है।',
+      'परीक्षा केंद्र पर मूल ई-कॉल लेटर का स्पष्ट A4 साइज प्रिंटआउट, वैध मूल फोटो पहचान पत्र (मूल आधार कार्ड / ई-आधार / पासपोर्ट / ड्राइविंग लाइसेंस / पैन कार्ड) तथा 2 नवीनतम पासपोर्ट साइज रंगीन फोटो ले जाना अनिवार्य है।',
+      'परीक्षा केंद्र पर अभ्यर्थियों का आधार लिंक्ड बायोमेट्रिक ऑथेंटिकेशन (Aadhaar Biometric Verification) किया जाएगा। अतः मूल आधार कार्ड साथ लाना अनिवार्य है।',
+      'परीक्षा हॉल में मोबाइल फोन, स्मार्ट वॉच, ब्लूटूथ, ईयरफोन, कैलकुलेटर, पर्स, इलेक्ट्रॉनिक गैजेट या धातु की वस्तुएं ले जाना पूर्णतः प्रतिबंधित है।',
+    ],
+    stepsToDownload: [
+      'चरण 1: रेलवे भर्ती बोर्ड के आधिकारिक केंद्रीकृत पोर्टल rrbapply.gov.in अथवा अपने क्षेत्रीय आरआरबी (RRB Bhopal, Chandigarh, Mumbai, Patna, Prayagraj, Secunderabad, Kolkata आदि) की आधिकारिक वेबसाइट पर जाएं।',
+      'चरण 2: होमपेज पर "CEN 03/2026: Section Controller - Click here to View Exam City & Date Intimation Slip and Download SC/ST Travel Pass" लिंक पर क्लिक करें।',
+      'चरण 3: लॉगिन विंडो में अपना पंजीकरण संख्या / मोबाइल नंबर / ईमेल (Registration Number) और पासवर्ड (DOB / Password) दर्ज करें।',
+      'चरण 4: स्क्रीन पर प्रदर्शित सुरक्षा कैप्चा कोड भरकर "Login" बटन पर क्लिक करें।',
+      'चरण 5: कैंडिडेट डैशबोर्ड पर "City Intimation Slip" टैब पर क्लिक करके अपना आवंटित परीक्षा शहर, परीक्षा तिथि (12 या 13 अक्टूबर), शिफ्ट और रिपोर्टिंग समय चेक करें।',
+      'चरण 6: एससी/एसटी अभ्यर्थी अपना फ्री रेल ट्रैवल पास भी डाउनलोड कर लें।',
+      'चरण 7: 08 अक्टूबर 2026 से उसी लॉगिन डैशबोर्ड से "Download e-Call Letter / Admit Card" लिंक पर क्लिक करके अपना फाइनल एडमिट कार्ड डाउनलोड एवं प्रिंट करें।',
+    ],
+    faqs: [
+      {
+        question: 'रेलवे आरआरबी सेक्शन कंट्रोलर की परीक्षा कब आयोजित की जाएगी?',
+        answer: 'रेलवे भर्ती बोर्ड द्वारा सेक्शन कंट्रोलर (CEN 03/2026) की कंप्यूटर आधारित परीक्षा (CBT) 12 और 13 अक्टूबर 2026 को विभिन्न पारियों में आयोजित की जाएगी।',
+      },
+      {
+        question: 'आरआरबी सेक्शन कंट्रोलर एग्जाम सिटी स्लिप कब जारी हुई और इसे कैसे चेक करें?',
+        answer: 'एग्जाम सिटी और डेट इंटिमेशन स्लिप 02 अक्टूबर 2026 को जारी कर दी गई है। उम्मीदवार rrbapply.gov.in पर लॉगिन करके अपना आवंटित शहर और शिफ्ट समय देख सकते हैं।',
+      },
+      {
+        question: 'आरआरबी सेक्शन कंट्रोलर का मुख्य एडमिट कार्ड (e-Call Letter) कब आएगा?',
+        answer: 'परीक्षा के नियम के अनुसार मुख्य एडमिट कार्ड परीक्षा तिथि से 4 दिन पहले, यानी 08 अक्टूबर 2026 से ऑनलाइन डाउनलोड के लिए उपलब्ध होगा।',
+      },
+      {
+        question: 'सेक्शन कंट्रोलर सीबीटी परीक्षा का पैटर्न एवं अंक योजना क्या है?',
+        answer: 'सीबीटी परीक्षा में कुल 100 बहुविकल्पीय प्रश्न (गणित, सामान्य बुद्धि एवं तर्क, सामान्य विज्ञान और सामान्य जागरूकता) पूछे जाएंगे। परीक्षा की अवधि 90 मिनट (दिव्यांगों हेतु 120 मिनट) होगी तथा प्रत्येक गलत उत्तर पर 1/3 अंक की नेगेटिव मार्किंग होगी।',
+      },
+      {
+        question: 'क्या परीक्षा केंद्र पर आधार कार्ड ले जाना अनिवार्य है?',
+        answer: 'हाँ, परीक्षा केंद्र पर उम्मीदवारों की पहचान की पुष्टि के लिए आधार आधारित बायोमेट्रिक सत्यापन किया जाएगा, इसलिए मूल आधार कार्ड साथ ले जाना अनिवार्य है।',
+      },
+      {
+        question: 'एससी/एसटी अभ्यर्थियों के लिए फ्री रेल ट्रैवल पास कैसे मिलेगा?',
+        answer: 'जिन एससी/एसटी अभ्यर्थियों ने आवेदन के समय निःशुल्क यात्रा सुविधा का विकल्प चुना था, वे एग्जाम सिटी स्लिप के साथ ही अपना ट्रैवल पास डाउनलोड कर सकते हैं।',
+      },
+    ],
+    publishedAt: '2026-10-02',
+    updatedAt: '2026-10-02',
+    isDemo: false,
+  },
+
+  // 1. SSC CGL Tier 1 Exam City / Application Status & Admit Card 2026
   {
     id: 'ac-ssc-cgl-tier-1-exam-city-admit-card-2026',
     slug: 'ssc-cgl-tier-1-exam-city-intimation-admit-card-2026',
@@ -288,51 +352,6 @@ export const NEW_REQUESTED_ADMIT_CARDS: AdmitCard[] = [
     ],
     publishedAt: '2026-09-17',
     updatedAt: '2026-09-17',
-    isDemo: false,
-  },
-  // 1. Railway RRB Section Controller Exam Date 2026
-  {
-    id: 'ac-rrb-section-controller-exam-date-2026',
-    slug: 'railway-rrb-section-controller-exam-date-2026',
-    examName: 'Railway RRB Section Controller Exam Date 2026',
-    examNameHi: 'रेलवे आरआरबी सेक्शन कंट्रोलर (Section Controller) भर्ती परीक्षा तिथि 2026 घोषित',
-    organization: 'Railway Recruitment Boards (RRB) / Ministry of Railways',
-    postName: 'Section Controller (Traffic Apprentice / Operating Department)',
-    totalVacancy: '2,840 Posts (Tentative PAN India across all RRBs)',
-    examDate: '18/11/2026 to 22/11/2026 (CBT Phase-1)',
-    status: 'Released',
-    releaseDate: '10/09/2026 (Exam Date Notice Out)',
-    downloadUrl: 'https://rrbapply.gov.in',
-    officialNotificationUrl: 'https://www.rrbcdg.gov.in',
-    instructions: [
-      'रेलवे भर्ती बोर्ड (RRB) द्वारा सेक्शन कंट्रोलर पदों हेतु कंप्यूटर आधारित परीक्षा (CBT-1) का विस्तृत परीक्षा कार्यक्रम आधिकारिक वेबसाइटों पर जारी कर दिया गया है।',
-      'परीक्षा शहर एवं तिथि आवंटन पर्ची (Exam City & Date Intimation Slip) परीक्षा तिथि से 10 दिन पूर्व (लगभग 08 नवंबर 2026 से) पोर्टल पर लाइव होगी।',
-      'अनुसूचित जाति/अनुसूचित जनजाति (SC/ST) अभ्यर्थियों के लिए निःशुल्क रेल यात्रा पास (Free Travel Authority Pass) भी सिटी स्लिप के साथ डाउनलोड हेतु उपलब्ध कराया जाएगा।',
-      'ई-कॉल लेटर (E-Admit Card) परीक्षा तिथि से 4 दिन पूर्व डाउनलोड किया जा सकेगा। परीक्षा केंद्र पर आधार बायोमेट्रिक प्रमाणीकरण अनिवार्य होगा।',
-    ],
-    stepsToDownload: [
-      'आरआरबी के आधिकारिक केंद्रीकृत पोर्टल rrbapply.gov.in अथवा अपने संबंधित क्षेत्रीय आरआरबी (RRB Chandigarh, Bhopal, Patna, Mumbai आदि) की वेबसाइट पर जाएं।',
-      'होमपेज पर "CEN Section Controller Recruitment 2026: Notice on Exam Schedule for CBT-1" लिंक पर क्लिक करें।',
-      'लॉगिन पेज पर अपना रजिस्ट्रेशन नंबर / यूजर आईडी (Registration Number) और पासवर्ड (DOB) दर्ज करें।',
-      'स्क्रीन पर अपनी परीक्षा तिथि, शिफ्ट समय एवं आवंटित परीक्षा शहर की जानकारी जांचें।',
-      'ई-कॉल लेटर लिंक सक्रिय होने पर एडमिट कार्ड डाउनलोड करें और रंगीन प्रिंटआउट निकाल लें।',
-    ],
-    faqs: [
-      {
-        question: 'आरआरबी सेक्शन कंट्रोलर सीबीटी-1 परीक्षा कब से शुरू होगी?',
-        answer: 'आरआरबी के आधिकारिक नोटिस के अनुसार सीबीटी-1 परीक्षा 18 नवंबर से 22 नवंबर 2026 के मध्य विभिन्न पारियों में आयोजित की जाएगी।',
-      },
-      {
-        question: 'एडमिट कार्ड और एग्जाम सिटी स्लिप कब उपलब्ध होंगे?',
-        answer: 'एग्जाम सिटी स्लिप परीक्षा से 10 दिन पूर्व (08/11/2026) तथा अंतिम ई-एडमिट कार्ड परीक्षा से ठीक 4 दिन पूर्व संबंधित आरआरबी पोर्टल से डाउनलोड किए जा सकेंगे।',
-      },
-      {
-        question: 'क्या परीक्षा में नेगेटिव मार्किंग होगी?',
-        answer: 'हाँ, प्रत्येक गलत उत्तर के लिए 1/3 अंक की नकारात्मक कटौती (Negative Marking) की जाएगी।',
-      },
-    ],
-    publishedAt: '2026-09-10',
-    updatedAt: '2026-09-11',
     isDemo: false,
   },
 
